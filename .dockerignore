@@ -1,0 +1,8 @@
+.git
+.env
+.data
+frontend/node_modules
+frontend/dist
+backend/uploads
+backend/mood
+tests/artifacts

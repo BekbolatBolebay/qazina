@@ -1,0 +1,94 @@
+[
+  {
+    "key": "chameleon",
+    "title": "Хамелеон",
+    "author": "Антон Чехов",
+    "topic": "Общество",
+    "language": "ru",
+    "year": 1884,
+    "color": "#7f6955",
+    "url": "https://ru.wikisource.org/wiki/Хамелеон_(Чехов)/Версия_2",
+    "description": "Короткий рассказ о власти, статусе и удивительной гибкости чужих убеждений."
+  },
+  {
+    "key": "what-men-live-by",
+    "title": "Чем люди живы",
+    "author": "Лев Толстой",
+    "topic": "Отношения",
+    "language": "ru",
+    "year": 1881,
+    "color": "#6e8067",
+    "url": "https://ru.wikisource.org/wiki/Чем_люди_живы_(Толстой)",
+    "description": "Притча о сострадании, взаимной помощи и том, чего человеку на самом деле не хватает."
+  },
+  {
+    "key": "dream",
+    "title": "Сон смешного человека",
+    "author": "Фёдор Достоевский",
+    "topic": "Философия",
+    "language": "ru",
+    "year": 1877,
+    "color": "#616e86",
+    "url": "https://ru.wikisource.org/wiki/Сон_смешного_человека_(Достоевский)",
+    "description": "Фантастический рассказ о равнодушии, надежде и попытке начать жизнь заново."
+  },
+  {
+    "key": "overcoat",
+    "title": "Шинель",
+    "author": "Николай Гоголь",
+    "topic": "Классика",
+    "language": "ru",
+    "year": 1842,
+    "color": "#8b655b",
+    "url": "https://ru.wikisource.org/wiki/Шинель_(Гоголь)/ПСС_1938_(СО)",
+    "description": "Петербургская повесть о незаметном человеке, его большой мечте и цене равнодушия."
+  },
+  {
+    "key": "art-of-war",
+    "title": "Искусство войны",
+    "original_title": "The Art of War",
+    "author": "Сунь-цзы",
+    "topic": "Стратегия",
+    "language": "en",
+    "year": 1910,
+    "color": "#4f6c61",
+    "url": "https://www.gutenberg.org/cache/epub/17405/pg17405.txt",
+    "description": "Классический трактат о стратегии. Полный английский перевод Лайонела Джайлза (1910), без современного пересказа."
+  },
+  {
+    "key": "meditations",
+    "title": "Наедине с собой",
+    "original_title": "Meditations",
+    "author": "Марк Аврелий",
+    "topic": "Философия",
+    "language": "en",
+    "year": 1634,
+    "color": "#817a5c",
+    "url": "https://www.gutenberg.org/cache/epub/2680/pg2680.txt",
+    "description": "Личные размышления римского императора о характере, времени и отношении к людям. Полный английский текст."
+  },
+  {
+    "key": "candle",
+    "title": "История свечи",
+    "original_title": "The Chemical History of a Candle",
+    "author": "Майкл Фарадей",
+    "topic": "Наука",
+    "language": "en",
+    "year": 1861,
+    "color": "#5c7a87",
+    "url": "https://www.gutenberg.org/cache/epub/14474/pg14474.txt",
+    "description": "Шесть лекций о химии и физике обычной свечи. Английский оригинал лекций с примечаниями; текстовое издание без иллюстраций."
+  },
+  {
+    "key": "franklin",
+    "title": "Автобиография",
+    "original_title": "The Autobiography of Benjamin Franklin",
+    "author": "Бенджамин Франклин",
+    "topic": "Биографии",
+    "language": "en",
+    "year": 1791,
+    "color": "#977876",
+    "url": "https://www.gutenberg.org/cache/epub/148/pg148.txt",
+    "description": "Воспоминания о ремесле, самообразовании, привычках и гражданской жизни. Полный английский текст."
+  }
+]

@@ -1,0 +1,10 @@
+.env
+.data/
+backend/uploads/
+backend/mood
+frontend/node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+tests/artifacts/
+playwright-report/
+test-results/

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Mood
+Comment=Запустить Mood и открыть сайт
+Exec=/home/yernur/Mood/run --open --pause-on-error
+Path=/home/yernur/Mood
+Icon=/home/yernur/Mood/frontend/public/logo.svg
+Terminal=true
+Categories=Network;
+StartupNotify=false

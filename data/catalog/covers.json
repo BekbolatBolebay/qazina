@@ -1,0 +1,93 @@
+[
+  {
+    "title": "Хамелеон",
+    "author": "Антон Чехов",
+    "image": "https://content.img-gorod.ru/pim/products/images/11/ea/0193ade5-50c2-7704-b022-d72bc97b11ea.jpg",
+    "source": "https://www.chitai-gorod.ru/product/hameleon-2942184",
+    "edition": "Эксмо, ISBN 978-5-04-173096-3"
+  },
+  {
+    "title": "Чем люди живы",
+    "author": "Лев Толстой",
+    "image": "https://cdn.litres.ru/pub/c/cover_415/68724411.webp",
+    "source": "https://www.litres.ru/book/lev-tolstoy/chem-ludi-zhivy-68724411/",
+    "edition": "Мини Классика, электронное издание ЛитРес"
+  },
+  {
+    "title": "Сон смешного человека",
+    "author": "Фёдор Достоевский",
+    "image": "https://cdn.litres.ru/pub/c/cover/172625.jpg",
+    "source": "https://www.litres.ru/book/fedor-dostoevskiy/son-smeshnogo-cheloveka-172625/",
+    "edition": "Электронное издание ЛитРес"
+  },
+  {
+    "title": "Шинель",
+    "author": "Николай Гоголь",
+    "image": "https://content.img-gorod.ru/pim/products/images/c0/2d/018ee7a1-79e0-7f82-bdbd-f3831e39c02d.jpg",
+    "source": "https://www.chitai-gorod.ru/product/shinel-2901892",
+    "edition": "Стрекоза, ISBN 978-5-9951-5175-3"
+  },
+  {
+    "title": "Искусство войны",
+    "author": "Сунь-цзы",
+    "image": "https://dover-books-us.imgix.net/covers/9780486839325.jpg?auto=format&w=1000",
+    "source": "https://store.doverpublications.com/products/9780486839325",
+    "edition": "Dover Publications, ISBN 9780486839325"
+  },
+  {
+    "title": "Наедине с собой",
+    "author": "Марк Аврелий",
+    "image": "https://bilder.akademibokhandeln.se/images_akb/9780008425012_766",
+    "source": "https://www.akademibokhandeln.se/bok/meditations/9780008425012",
+    "edition": "Collins Classics, ISBN 9780008425012"
+  },
+  {
+    "title": "История свечи",
+    "author": "Майкл Фарадей",
+    "image": "https://www.mjtgiftshop.org/cdn/shop/products/faraday_candle_500.jpg?v=1320189056",
+    "source": "https://www.mjtgiftshop.org/products/the-chemical-history-of-a-candle",
+    "edition": "Dover Publications, 2003"
+  },
+  {
+    "title": "Автобиография",
+    "author": "Бенджамин Франклин",
+    "image": "https://images-us.bookshop.org/ingram/9780785833505.jpg?v=enc-v1",
+    "source": "https://bookshop.org/a/86124/9780785833505",
+    "edition": "Classic Thoughts and Thinkers, ISBN 9780785833505"
+  },
+  {
+    "title": "Слова назидания",
+    "author": "Абай Кунанбаев",
+    "image": "https://almatykitap.kz/upload/images/62844_140216_16.jpg",
+    "source": "https://almatykitap.kz/catalog/slova-nazidaniya-25307/",
+    "edition": "Алматыкітап, ISBN 978-601-01-4780-5"
+  },
+  {
+    "title": "Маленький принц",
+    "author": "Антуан де Сент-Экзюпери",
+    "image": "https://cdn.eksmo.ru/v2/ITD000000001236026/COVER/cover1__w410.jpg",
+    "source": "https://eksmo.ru/book/malenkiy-prints-ris-avtora-siluet-ITD1236026/",
+    "edition": "Эксмо, ISBN 978-5-04-158907-3"
+  },
+  {
+    "title": "Абай жолы",
+    "author": "Мухтар Ауэзов",
+    "image": "https://simg.marwin.kz/media/catalog/product/cache/8d1771fdd19ec2393e47701ba45e606d/a/u/auezov_m_abay_zholy_4_kitap_zh_1463295_20.png",
+    "source": "https://www.marwin.kz/kz/calssics-in-kazakh-language/ujezov-m-abaj-zholy-4-kitap-zhina-y.html",
+    "edition": "Абай жолы, I кітап, Меломан / Marwin"
+  },
+  {
+    "title": "Гордость и предубеждение",
+    "author": "Джейн Остин",
+    "image": "https://cdn.eksmo.ru/v2/ITD000000001049409/COVER/cover1__w820.jpg",
+    "source": "https://eksmo.ru/book/gordost-i-predubezhdenie-ITD1049409/",
+    "edition": "Эксмо, ISBN 978-5-04-106641-3"
+  },
+  {
+    "title": "Белые ночи",
+    "author": "Фёдор Достоевский",
+    "image": "https://cdn.eksmo.ru/v2/ITD000000001164031/COVER/cover1__w820.jpg",
+    "source": "https://eksmo.ru/book/belye-nochi-ITD1164031/",
+    "edition": "Эксмо, ISBN 978-5-04-122425-7"
+  }
+]

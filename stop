@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+if [ -f .data/server.pid ]; then
+  task_pid=$(cat .data/server.pid)
+  # После пересборки в readlink добавляется «(deleted)» — сдвигаем, чтобы
+  # не остаться с «неубиваемым» старым процессом.
+  task_exe=$(readlink "/proc/$task_pid/exe" 2>/dev/null || true)
+  task_exe=${task_exe% (deleted)}
+  if [ "$task_exe" = "$PWD/.data/mood-server" ]; then kill "$task_pid"; fi
+  : > .data/server.pid
+fi
+if [ -f .data/postgres/PG_VERSION ] && command -v pg_ctl >/dev/null; then
+  if pg_ctl -D .data/postgres status >/dev/null 2>&1; then pg_ctl -D .data/postgres stop -m fast; fi
+fi
+echo 'Mood остановлена. Данные сохранены.'
