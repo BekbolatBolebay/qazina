@@ -54,6 +54,65 @@ html.dark body {
   display: none;
 }
 
+/* 3D Book & Page-Turn Effects */
+.book-3d-stage {
+  perspective: 1800px;
+}
+
+@keyframes pageFlipNext {
+  0% {
+    opacity: 0.35;
+    transform: rotateY(22deg) scale(0.985);
+    box-shadow: -18px 10px 30px rgba(23, 63, 53, 0.14);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+    box-shadow: 0 10px 30px -10px rgba(23, 63, 53, 0.08);
+  }
+}
+
+@keyframes pageFlipPrev {
+  0% {
+    opacity: 0.35;
+    transform: rotateY(-22deg) scale(0.985);
+    box-shadow: 18px 10px 30px rgba(23, 63, 53, 0.14);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+    box-shadow: 0 10px 30px -10px rgba(23, 63, 53, 0.08);
+  }
+}
+
+.animate-page-next {
+  transform-origin: left center;
+  animation: pageFlipNext 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-page-prev {
+  transform-origin: right center;
+  animation: pageFlipPrev 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.book-page-stack {
+  box-shadow:
+    3px 3px 0 #efe8dd,
+    4px 4px 0 #d8cfc2,
+    7px 7px 0 #f8f5ef,
+    8px 8px 0 #d8cfc2,
+    0 18px 40px -12px rgba(23, 63, 53, 0.16);
+}
+
+html.dark .book-page-stack {
+  box-shadow:
+    3px 3px 0 #26302c,
+    4px 4px 0 #141917,
+    7px 7px 0 #1d2421,
+    8px 8px 0 #141917,
+    0 18px 40px -12px rgba(0, 0, 0, 0.45);
+}
+
 @media print {
   body {
     background: #ffffff !important;

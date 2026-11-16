@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, BookOpen, ExternalLink, ShieldCheck, Sparkles } from "lucide-react";
+import { Book3DCover } from "@/components/books/Book3DCover";
 import { getBookBySlug } from "@/lib/books";
 import { getAllFragments } from "@/lib/fragments";
 
@@ -26,20 +27,16 @@ export default async function BookDetailPage({
       </Link>
 
       <div className="rounded-3xl border border-[#EFE8DD] bg-white p-6 shadow-literary dark:border-[#2C3733] dark:bg-[#1D2421] sm:p-8">
-        <div className="flex flex-col gap-6 sm:flex-row">
-          <div
-            className="flex h-52 w-36 shrink-0 flex-col justify-between rounded-2xl p-4 text-white shadow-md"
-            style={{ backgroundColor: book.cover_color }}
-          >
-            <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">
-              {book.language.toUpperCase()} · {book.age_min}+
-            </span>
-            <div>
-              <div className="literary-text text-base font-bold leading-snug">
-                {book.title}
-              </div>
-              <div className="mt-1 text-xs text-white/85">{book.author}</div>
-            </div>
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
+          <div className="flex justify-center sm:block">
+            <Book3DCover
+              title={book.title}
+              author={book.author}
+              language={book.language}
+              ageMin={book.age_min}
+              color={book.cover_color}
+              size="lg"
+            />
           </div>
 
           <div className="flex-1 space-y-3">

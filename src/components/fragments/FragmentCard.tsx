@@ -17,6 +17,7 @@ import {
   UserCheck,
   X,
 } from "lucide-react";
+import { Book3DCover } from "@/components/books/Book3DCover";
 import { useQazina } from "@/components/layout/QazinaProvider";
 import { buildLLMHeaders } from "@/lib/clientStorage";
 import { paginateChapters, type BookPage } from "@/lib/paginateBook";
@@ -359,21 +360,30 @@ export function FragmentCard({
           </div>
         ) : (
           <div className="mt-5 space-y-4 border-t border-[#e9ede5] pt-5 dark:border-[#26302C]">
-            <div>
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="rounded bg-[#2f6a50] px-2 py-0.5 text-[10px] font-bold uppercase text-white">
-                  {revealData.language.toUpperCase()}
-                </span>
-                <span className="text-[11px] font-semibold text-[#829184]">
-                  {revealData.rights_note}
-                </span>
+            <div className="flex items-center gap-4">
+              <Book3DCover
+                title={revealData.book_title}
+                author={revealData.author}
+                language={revealData.language}
+                color={revealData.cover_color}
+                size="sm"
+              />
+              <div className="min-w-0 flex-1">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="rounded bg-[#2f6a50] px-2 py-0.5 text-[10px] font-bold uppercase text-white">
+                    {revealData.language.toUpperCase()}
+                  </span>
+                  <span className="text-[11px] font-semibold text-[#829184]">
+                    {revealData.rights_note}
+                  </span>
+                </div>
+                <h2 className="literary-text mt-1.5 text-xl font-bold text-[#253b30] dark:text-[#F3EFE7] sm:text-2xl">
+                  {revealData.book_title}
+                </h2>
+                <p className="text-xs font-bold text-[#B58B54]">
+                  {revealData.author} · {revealData.chapter_title}
+                </p>
               </div>
-              <h2 className="literary-text mt-1.5 text-2xl font-bold text-[#253b30] dark:text-[#F3EFE7]">
-                {revealData.book_title}
-              </h2>
-              <p className="text-xs font-bold text-[#B58B54]">
-                {revealData.author} · {revealData.chapter_title}
-              </p>
             </div>
 
             {/* Inline continuation matching offline-demo.html */}

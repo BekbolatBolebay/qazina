@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { BookOpen, KeySquare, Search, ShieldCheck } from "lucide-react";
+import { Book3DCover } from "@/components/books/Book3DCover";
 import { useQazina } from "@/components/layout/QazinaProvider";
 import type { Book, LanguageCode } from "@/types/book";
 
@@ -115,13 +116,15 @@ export default function BooksPage() {
                 className="flex flex-col justify-between rounded-2xl border border-[#EFE8DD] bg-white p-5 shadow-sm transition hover:border-[#B58B54] dark:border-[#2C3733] dark:bg-[#1D2421]"
               >
                 <div>
-                  <div className="mb-3 flex items-start justify-between gap-2">
-                    <div
-                      className="flex h-12 w-9 shrink-0 items-center justify-center rounded-lg text-xs font-bold text-white shadow-sm"
-                      style={{ backgroundColor: book.cover_color }}
-                    >
-                      {book.language.toUpperCase()}
-                    </div>
+                  <div className="mb-3 flex items-start justify-between gap-3">
+                    <Book3DCover
+                      title={book.title}
+                      author={book.author}
+                      language={book.language}
+                      ageMin={book.age_min}
+                      color={book.cover_color}
+                      size="sm"
+                    />
                     <div className="flex flex-wrap justify-end gap-1">
                       <span className="rounded-full bg-[#EFE8DD] px-2 py-0.5 text-[10px] font-bold text-[#173F35] dark:bg-[#26302C] dark:text-[#D4B382]">
                         {book.age_min}+

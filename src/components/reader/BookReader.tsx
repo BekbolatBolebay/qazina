@@ -62,10 +62,16 @@ export function BookReader({
     chapters.length === 0 && hasPdf ? "pdf" : "text",
   );
   const [pageIdx, setPageIdx] = useState(initialPageIdx);
+  const [flipDir, setFlipDir] = useState<"next" | "prev">("next");
   const [prefs, setPrefs] = useState<ReaderPrefs>(DEFAULT_READER_PREFS);
   const [saveOpen, setSaveOpen] = useState(false);
 
   const currentPage: BookPage | undefined = pages[pageIdx];
+
+  function goToPage(nextIdx: number) {
+    setFlipDir(nextIdx >= pageIdx ? "next" : "prev");
+    setPageIdx(nextIdx);
+  }
 
   useEffect(() => {
     setPrefs(loadReaderPrefs());
@@ -98,9 +104,9 @@ export function BookReader({
     function onKey(e: KeyboardEvent) {
       if (mode !== "text") return;
       if (e.key === "ArrowLeft" && pageIdx > 0) {
-        setPageIdx((i) => Math.max(0, i - 1));
+        goToPage(Math.max(0, pageIdx - 1));
       } else if (e.key === "ArrowRight" && pageIdx < pages.length - 1) {
-        setPageIdx((i) => Math.min(pages.length - 1, i + 1));
+        goToPage(Math.min(pages.length - 1, pageIdx + 1));
       }
     }
     window.addEventListener("keydown", onKey);
@@ -339,7 +345,7 @@ export function BookReader({
           <div className="flex flex-wrap items-center justify-between gap-2">
             <select
               value={pageIdx}
-              onChange={(e) => setPageIdx(Number(e.target.value))}
+              onChange={(e) => goToPage(Number(e.target.value))}
               aria-label="Бетті таңдау"
               className="max-w-xs truncate rounded-lg border border-[#EFE8DD] bg-[#F8F5EF] px-2.5 py-1.5 font-semibold text-[#173F35] outline-none dark:border-[#2C3733] dark:bg-[#141917] dark:text-[#F3EFE7]"
             >
@@ -393,65 +399,70 @@ export function BookReader({
           />
         </div>
       ) : currentPage ? (
-        <article
-          className={`rounded-3xl border p-6 shadow-literary transition sm:p-10 ${themeClasses}`}
-          style={{
-            fontSize: `${prefs.fontSize}px`,
-            lineHeight: prefs.lineHeight,
-            fontFamily:
-              prefs.fontFamily === "serif"
-                ? "var(--font-serif)"
-                : "var(--font-sans)",
-          }}
-        >
-          <div className="mb-5 flex items-center justify-between border-b border-current/10 pb-3 font-sans text-xs opacity-70">
-            <span>{currentPage.chapterTitle}</span>
-            <span className="font-bold">{currentPage.pageNumber}-бет</span>
-          </div>
+        <div className="book-3d-stage">
+          <article
+            key={currentPage.pageNumber}
+            className={`book-page-stack rounded-3xl border p-6 transition sm:p-10 ${
+              flipDir === "next" ? "animate-page-next" : "animate-page-prev"
+            } ${themeClasses}`}
+            style={{
+              fontSize: `${prefs.fontSize}px`,
+              lineHeight: prefs.lineHeight,
+              fontFamily:
+                prefs.fontFamily === "serif"
+                  ? "var(--font-serif)"
+                  : "var(--font-sans)",
+            }}
+          >
+            <div className="mb-5 flex items-center justify-between border-b border-current/10 pb-3 font-sans text-xs opacity-70">
+              <span>{currentPage.chapterTitle}</span>
+              <span className="font-bold">{currentPage.pageNumber}-бет</span>
+            </div>
 
-          <div className="min-h-[340px]">{renderPageContent(currentPage)}</div>
+            <div className="min-h-[340px]">{renderPageContent(currentPage)}</div>
 
-          <div className="mt-6 text-center font-sans text-xs font-bold opacity-50">
-            — {currentPage.pageNumber} —
-          </div>
+            <div className="mt-6 text-center font-sans text-xs font-bold opacity-50">
+              — {currentPage.pageNumber} —
+            </div>
 
-          <div className="mt-6 grid grid-cols-2 gap-3 border-t border-current/10 pt-5 font-sans text-xs sm:flex sm:items-center sm:justify-between sm:text-sm">
-            <button
-              type="button"
-              disabled={pageIdx <= 0}
-              onClick={() => {
-                setPageIdx((i) => Math.max(0, i - 1));
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-              className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-current/20 px-3 py-2.5 font-semibold disabled:opacity-40 sm:px-4 sm:py-2"
-            >
-              <ChevronLeft size={16} />
-              Алдыңғы бет
-            </button>
-
-            {pageIdx < pages.length - 1 ? (
+            <div className="mt-6 grid grid-cols-2 gap-3 border-t border-current/10 pt-5 font-sans text-xs sm:flex sm:items-center sm:justify-between sm:text-sm">
               <button
                 type="button"
+                disabled={pageIdx <= 0}
                 onClick={() => {
-                  setPageIdx((i) => Math.min(pages.length - 1, i + 1));
+                  goToPage(Math.max(0, pageIdx - 1));
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
-                className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-[#173F35] px-4 py-2.5 font-semibold text-white hover:bg-[#112F28] sm:px-5 sm:py-2"
+                className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-current/20 px-3 py-2.5 font-semibold disabled:opacity-40 sm:px-4 sm:py-2"
               >
-                Келесі бет
-                <ChevronRight size={16} />
+                <ChevronLeft size={16} />
+                Алдыңғы бет
               </button>
-            ) : (
-              <Link
-                href={book.is_quest ? "/quest" : "/discover"}
-                className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-[#B58B54] px-4 py-2.5 font-semibold text-white sm:px-5 sm:py-2"
-              >
-                {book.is_quest ? "Квест пазлына өту" : "Басқа оқиға табу"}
-                <ArrowRight size={16} />
-              </Link>
-            )}
-          </div>
-        </article>
+
+              {pageIdx < pages.length - 1 ? (
+                <button
+                  type="button"
+                  onClick={() => {
+                    goToPage(Math.min(pages.length - 1, pageIdx + 1));
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-[#173F35] px-4 py-2.5 font-semibold text-white hover:bg-[#112F28] sm:px-5 sm:py-2"
+                >
+                  Келесі бет
+                  <ChevronRight size={16} />
+                </button>
+              ) : (
+                <Link
+                  href={book.is_quest ? "/quest" : "/discover"}
+                  className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-[#B58B54] px-4 py-2.5 font-semibold text-white sm:px-5 sm:py-2"
+                >
+                  {book.is_quest ? "Квест пазлына өту" : "Басқа оқиға табу"}
+                  <ArrowRight size={16} />
+                </Link>
+              )}
+            </div>
+          </article>
+        </div>
       ) : (
         <div className="rounded-3xl border border-[#EFE8DD] bg-white p-8 text-center dark:border-[#2C3733] dark:bg-[#1D2421]">
           <p className="text-sm text-neutral-600 dark:text-neutral-300">
