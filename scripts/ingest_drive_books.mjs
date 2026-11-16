@@ -100,7 +100,7 @@ function splitIntoChapters(rawText, bookId) {
     const p = paragraphs[i];
     buf.push(p);
     bufLen += p.length;
-    if (bufLen >= 1600) {
+    if (bufLen >= 2200) {
       const ord = chapters.length + 1;
       chapters.push({
         id: `ch_${ord}`,
@@ -111,10 +111,10 @@ function splitIntoChapters(rawText, bookId) {
       });
       buf = [];
       bufLen = 0;
-      if (chapters.length >= 12) break;
+      if (chapters.length >= 45) break;
     }
   }
-  if (buf.length > 0 && chapters.length < 12) {
+  if (buf.length > 0 && chapters.length < 45) {
     const ord = chapters.length + 1;
     chapters.push({
       id: `ch_${ord}`,
@@ -186,21 +186,29 @@ function extractBestExcerpt(chapters) {
 
 async function downloadPdf(fileId, destPath) {
   if (fs.existsSync(destPath) && fs.statSync(destPath).size > 2048) {
-    const head = fs.readFileSync(destPath, { encoding: "utf8", flag: "r" }).slice(0, 8);
-    if (head.startsWith("%PDF-")) return true;
+    const buf = Buffer.alloc(8);
+    const fd = fs.openSync(destPath, "r");
+    fs.readSync(fd, buf, 0, 8, 0);
+    fs.closeSync(fd);
+    if (buf.toString("utf8").startsWith("%PDF-")) return true;
   }
-  const url = `https://drive.google.com/uc?export=download&id=${fileId}`;
-  try {
-    execFileSync("curl", ["-fsSL", "--max-time", "25", "-o", destPath, url], { stdio: "ignore" });
-    if (fs.existsSync(destPath) && fs.statSync(destPath).size > 2048) {
-      const buf = Buffer.alloc(8);
-      const fd = fs.openSync(destPath, "r");
-      fs.readSync(fd, buf, 0, 8, 0);
-      fs.closeSync(fd);
-      if (buf.toString("utf8").startsWith("%PDF-")) return true;
+  const urls = [
+    `https://drive.usercontent.google.com/download?id=${fileId}&export=download&confirm=t`,
+    `https://drive.google.com/uc?export=download&id=${fileId}`,
+  ];
+  for (const url of urls) {
+    try {
+      execFileSync("curl", ["-fsSL", "--max-time", "35", "-o", destPath, url], { stdio: "ignore" });
+      if (fs.existsSync(destPath) && fs.statSync(destPath).size > 2048) {
+        const buf = Buffer.alloc(8);
+        const fd = fs.openSync(destPath, "r");
+        fs.readSync(fd, buf, 0, 8, 0);
+        fs.closeSync(fd);
+        if (buf.toString("utf8").startsWith("%PDF-")) return true;
+      }
+    } catch {
+      // try next url
     }
-  } catch {
-    // ignore download timeout
   }
   if (fs.existsSync(destPath)) fs.unlinkSync(destPath);
   return false;
@@ -227,7 +235,7 @@ async function main() {
     const sourceUrl = `https://drive.google.com/file/d/${item.fileId}/view`;
 
     let chapters = [];
-    if (item.sizeMb <= 5.5) {
+    if (item.sizeMb <= 25) {
       const pdfPath = path.join(PDF_DIR, `${item.id}.pdf`);
       const ok = await downloadPdf(item.fileId, pdfPath);
       if (ok) {
@@ -235,7 +243,7 @@ async function main() {
         try {
           const rawText = execFileSync("pdftotext", [pdfPath, "-"], {
             encoding: "utf8",
-            maxBuffer: 15 * 1024 * 1024,
+            maxBuffer: 25 * 1024 * 1024,
           });
           if (isCleanText(rawText)) {
             const targetId = item.mergeSlug && bookBySlug.has(item.mergeSlug)
@@ -260,7 +268,7 @@ async function main() {
       existing.pdf_url = pdfUrl;
       existing.pdf_preview_url = previewUrl;
       existing.file_size = item.size;
-      if (existing.chapters.length === 0 && chapters.length > 0) {
+      if (chapters.length > existing.chapters.length && !["book_003", "book_009"].includes(existing.id)) {
         existing.chapters = chapters;
       }
       activeBook = existing;

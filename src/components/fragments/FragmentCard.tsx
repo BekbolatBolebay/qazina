@@ -6,6 +6,8 @@ import {
   Bookmark,
   BookOpen,
   Check,
+  ChevronLeft,
+  ChevronRight,
   Heart,
   HelpCircle,
   ImagePlus,
@@ -13,9 +15,11 @@ import {
   RefreshCw,
   Share2,
   UserCheck,
+  X,
 } from "lucide-react";
 import { useQazina } from "@/components/layout/QazinaProvider";
 import { buildLLMHeaders } from "@/lib/clientStorage";
+import type { Chapter } from "@/types/book";
 import type { HiddenFragmentPayload, RevealPayload } from "@/types/fragment";
 import type { MoodAnalysisResult } from "@/types/recommendation";
 import { SaveThoughtModal } from "./SaveThoughtModal";
@@ -49,6 +53,9 @@ export function FragmentCard({
   const [showFormula, setShowFormula] = useState(false);
   const [sceneImage, setSceneImage] = useState<string | null>(null);
   const [imageBusy, setImageBusy] = useState(false);
+  const [inlineChapters, setInlineChapters] = useState<Chapter[] | null>(null);
+  const [inlineIdx, setInlineIdx] = useState(0);
+  const [loadingBook, setLoadingBook] = useState(false);
 
   async function handleReveal() {
     if (revealing || revealData) return;
@@ -105,6 +112,36 @@ export function FragmentCard({
       showToast("Сурет генерациясы сәтсіз болды");
     } finally {
       setImageBusy(false);
+    }
+  }
+
+  async function handleOpenInlineFullBook() {
+    if (!revealData) return;
+    if (inlineChapters) {
+      setInlineChapters(null);
+      return;
+    }
+    setLoadingBook(true);
+    try {
+      const res = await fetch(
+        `/api/books/${encodeURIComponent(revealData.book_slug)}/chapters`,
+      );
+      if (res.ok) {
+        const data = await res.json();
+        const chs = (data.chapters || []) as Chapter[];
+        setInlineChapters(chs);
+        const startIdx = chs.findIndex((c) => c.id === revealData.chapter_id);
+        setInlineIdx(startIdx >= 0 ? startIdx : 0);
+        void fetch("/api/analytics/summary", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ event: "book_open" }),
+        });
+      }
+    } catch {
+      showToast("Кітап тарауларын жүктеу сәтсіз болды");
+    } finally {
+      setLoadingBook(false);
     }
   }
 
@@ -360,7 +397,23 @@ export function FragmentCard({
               </div>
             )}
 
-            <div className="flex flex-col gap-2 sm:flex-row">
+            <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+              <button
+                type="button"
+                onClick={() => void handleOpenInlineFullBook()}
+                disabled={loadingBook}
+                className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#2f6a50] px-4 py-3 text-xs font-extrabold text-white transition hover:bg-[#245941] disabled:opacity-60"
+              >
+                {loadingBook ? (
+                  <Loader2 size={15} className="animate-spin" />
+                ) : (
+                  <BookOpen size={15} />
+                )}
+                {inlineChapters
+                  ? "Толық мәтінді жабу"
+                  : "Толық кітапты осы жерде оқу"}
+              </button>
+
               <Link
                 href={revealData.reader_url}
                 onClick={() => {
@@ -370,10 +423,9 @@ export function FragmentCard({
                     body: JSON.stringify({ event: "book_open" }),
                   });
                 }}
-                className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#2f6a50] px-4 py-3 text-xs font-extrabold text-white transition hover:bg-[#245941]"
+                className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-[#2f6a50] bg-white px-4 py-2.5 text-xs font-extrabold text-[#2f6a50] transition hover:bg-[#edf4e9] dark:border-[#D4B382] dark:bg-[#141917] dark:text-[#D4B382]"
               >
-                <BookOpen size={15} />
-                Толық кітапты ридерде оқу →
+                Ридер бетінде ашу →
               </Link>
 
               <button
@@ -390,6 +442,79 @@ export function FragmentCard({
                 {imageBusy ? "Салынуда..." : "Иллюстрация (AI)"}
               </button>
             </div>
+
+            {inlineChapters && inlineChapters.length > 0 && (
+              <div className="mt-4 rounded-2xl border border-[#d9e9d7] bg-[#F8F5EF] p-4 dark:border-[#2C3733] dark:bg-[#141917]">
+                <div className="mb-3 flex flex-wrap items-center justify-between gap-2 border-b border-[#e1e6df] pb-2.5 dark:border-[#26302C]">
+                  <select
+                    value={inlineIdx}
+                    onChange={(e) => setInlineIdx(Number(e.target.value))}
+                    aria-label="Тарау таңдау"
+                    className="max-w-[230px] truncate rounded-lg border border-[#d2e1d5] bg-white px-2.5 py-1.5 text-xs font-bold text-[#173F35] dark:border-[#2C3733] dark:bg-[#1D2421] dark:text-[#F3EFE7]"
+                  >
+                    {inlineChapters.map((ch, idx) => (
+                      <option key={ch.id} value={idx}>
+                        {ch.title}
+                      </option>
+                    ))}
+                  </select>
+
+                  <div className="flex items-center gap-2">
+                    <span className="text-[11px] font-semibold text-neutral-500">
+                      {inlineIdx + 1} / {inlineChapters.length}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setInlineChapters(null)}
+                      className="rounded-lg p-1 text-neutral-500 hover:bg-[#EFE8DD]"
+                      aria-label="Жабу"
+                    >
+                      <X size={15} />
+                    </button>
+                  </div>
+                </div>
+
+                <div className="literary-text max-h-[420px] space-y-2.5 overflow-y-auto pr-1 text-[16px] leading-[1.8] text-[#242424] dark:text-[#F3EFE7]">
+                  <h4 className="font-sans text-sm font-bold text-[#173F35] dark:text-[#D4B382]">
+                    {inlineChapters[inlineIdx]?.title}
+                  </h4>
+                  {inlineChapters[inlineIdx]?.content
+                    .split("\n")
+                    .map((line, i) =>
+                      line.trim() === "" ? (
+                        <div key={i} className="h-2" />
+                      ) : (
+                        <p key={i}>{line}</p>
+                      ),
+                    )}
+                </div>
+
+                <div className="mt-3 flex items-center justify-between border-t border-[#e1e6df] pt-3 dark:border-[#26302C]">
+                  <button
+                    type="button"
+                    disabled={inlineIdx <= 0}
+                    onClick={() => setInlineIdx((i) => Math.max(0, i - 1))}
+                    className="inline-flex items-center gap-1 rounded-lg border border-[#d2e1d5] bg-white px-3 py-1.5 text-xs font-bold disabled:opacity-40 dark:border-[#2C3733] dark:bg-[#1D2421]"
+                  >
+                    <ChevronLeft size={14} />
+                    Алдыңғы
+                  </button>
+                  <button
+                    type="button"
+                    disabled={inlineIdx >= inlineChapters.length - 1}
+                    onClick={() =>
+                      setInlineIdx((i) =>
+                        Math.min(inlineChapters.length - 1, i + 1),
+                      )
+                    }
+                    className="inline-flex items-center gap-1 rounded-lg bg-[#173F35] px-3 py-1.5 text-xs font-bold text-white disabled:opacity-40"
+                  >
+                    Келесі
+                    <ChevronRight size={14} />
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         )}
       </article>
