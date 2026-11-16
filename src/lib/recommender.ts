@@ -143,11 +143,16 @@ export async function recommendFragment(
   const exclude = new Set(req.exclude_ids || []);
   const preferDialogue = req.prefer_dialogue !== false;
 
-  const filterPool = (ignoreExcluded: boolean, ignoreLangFilter: boolean) =>
+  const filterPool = (
+    ignoreExcluded: boolean,
+    ignoreLangFilter: boolean,
+    driveOnly: boolean,
+  ) =>
     getApprovedFragments().filter((f) => {
       if (!ignoreExcluded && exclude.has(f.id)) return false;
       const book = getBookById(f.book_id);
       if (!book || !isRightsApproved(book.rights_status)) return false;
+      if (driveOnly && !book.drive_file_id) return false;
       if (book.chapters.length === 0) return false;
       if (f.age_min > maxAge || book.age_min > maxAge) return false;
       if (
@@ -161,9 +166,13 @@ export async function recommendFragment(
       return true;
     });
 
-  let pool = filterPool(false, false);
-  if (pool.length === 0) pool = filterPool(false, true);
-  if (pool.length === 0) pool = filterPool(true, true);
+  // Always prioritize fragments from the user's Google Drive books first
+  let pool = filterPool(false, false, true);
+  if (pool.length === 0) pool = filterPool(false, true, true);
+  if (pool.length === 0) pool = filterPool(false, false, false);
+  if (pool.length === 0) pool = filterPool(false, true, false);
+  if (pool.length === 0) pool = filterPool(true, true, true);
+  if (pool.length === 0) pool = filterPool(true, true, false);
 
   if (pool.length === 0) {
     return { analysis, fragment: null, remaining_candidates: 0 };

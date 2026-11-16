@@ -1,255 +1,1356 @@
 [
   {
-    "id": "frag_orig_window",
-    "book_id": "book_000",
-    "chapter_id": "ch_window",
-    "start_offset": 0,
-    "end_offset": 173,
-    "continuation_anchor": "frag_orig_window",
-    "text": "— Неге әр кеш сайын осы терезеге қарайсың?\n— Өйткені онда үнемі жарық жанып тұрады.\n— Ол үйде кім тұрады?\n— Білмеймін. Бірақ біреудің мені күтіп отырғанын елестеткен ұнайды.",
+    "id": "frag_drive_book_003",
+    "book_id": "book_003",
+    "chapter_id": "ch_1",
+    "start_offset": 156,
+    "end_offset": 471,
+    "continuation_anchor": "frag_drive_book_003",
+    "text": "— Әй, Қожа! — деді Сұлтан мені көріп. — Бүгін сабаққа неге ерте келдің? Әлде Майқанова апайдан қорқып қалдың ба?\n— Қорқатын мен бе екем! — дедім мұрнымды шүйіріп. — Жай ғана дәптерімді үйден ұмытып кете жаздаппын. Ал сен өзің ше, балық аулаймыз деген уәдең қайда?\n— Тссс! Қойшы, үндеме! Артымыздан біреу келе жатыр.",
     "type": "dialogue",
     "language": "kk",
-    "dialogue_category": "достық",
     "moods": [
-      "шаршау",
+      "қуаныш",
+      "зерігу",
+      "шаршау"
+    ],
+    "topics": [
+      "кітап",
+      "балалық шақ"
+    ],
+    "reader_intents": [
+      "күлкі",
+      "оқиғаға ену"
+    ],
+    "hook_score": 0.94,
+    "dialogue_score": 0.96,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 10,
+    "review_status": "approved",
+    "character_name": "Бердібек Соқпақбаев",
+    "character_situation": "«Менің атым Қожа» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_book_027",
+    "book_id": "book_027",
+    "chapter_id": "ch_3",
+    "start_offset": 0,
+    "end_offset": 330,
+    "continuation_anchor": "frag_drive_book_027",
+    "text": "етіп сұлап түсті.\nМаңайдан жұрт дабырлап жиылып қалып еді. Көксерек қара аланы\nтамағынан қысып буындырып тұрып-тұрып қоя берді де, жотасы күдірейіп\nтоптан шыға берді.\nЖеңген жаудың сығымынан зорға құтылған қара ала қаңсылап, жүні\nжығылып, бір жаққа кетті.\nОсы оқиғаның ертеңінде кешке жақын ауыл жанында жатқан қойға қасқыр\nшапты.",
+    "type": "prose",
+    "language": "kk",
+    "moods": [
+      "шытырман іздеу",
+      "зерігу",
+      "уайым"
+    ],
+    "topics": [
+      "кітап",
+      "повесть"
+    ],
+    "reader_intents": [
+      "оқиғаға ену",
+      "үміт"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 12,
+    "review_status": "approved",
+    "character_name": "Мұхтар Әуезов",
+    "character_situation": "«Көксерек» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_02",
+    "book_id": "gd_02",
+    "chapter_id": "ch_3",
+    "start_offset": 98,
+    "end_offset": 507,
+    "continuation_anchor": "frag_drive_gd_02",
+    "text": "Құрамысов (жақтырмай, тыржың етіп). Иə!\nГ о лощекин (алара қарап). Не сыбыр-күбір?\nҚұрамысов. Жай, мына кісі...\nГолощекин. Түсінбей отыр ма? (Елеусізге таяп келіп.) Біздің арамызда\nда жаулар бар. Троцкийлер бар. Не істеу керек? (Құрамысовқа). Аудар.\nК ұ р а м ы с о в (Елеусіздің құлағына). Жау бар дейді. Не істеу керек\nдейді.\nЕ л е у с і з. А-а. Жау ма? Жауды аяған жаралы. Иə. кұрту керек. Мен\nқол көтерем.",
+    "type": "prose",
+    "language": "kk",
+    "moods": [
+      "шытырман іздеу",
+      "зерігу",
+      "уайым"
+    ],
+    "topics": [
+      "кітап",
+      "тарихи драма"
+    ],
+    "reader_intents": [
+      "оқиғаға ену",
+      "үміт"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 14,
+    "review_status": "approved",
+    "character_name": "Шерхан Мұртаза",
+    "character_situation": "«Бесеудің хаты» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_book_036",
+    "book_id": "book_036",
+    "chapter_id": "ch_3",
+    "start_offset": 828,
+    "end_offset": 1196,
+    "continuation_anchor": "frag_drive_book_036",
+    "text": "Лашық үйдей биелер, жалын жайған,\nТалай-талай айғырдың сауырына,\nЖылдағы ырым,— ақ-ала құйылды айран.\nӨзеннің өнебойы елге толды,\nҚыс бытырап кеткендер қоңсы қонды.\nКезек-кезек ерулік əкелісіп,\nЕл менен ел жүргізді «ата жолды».\nЖастау жағы қымыз бен қызды бағып,\nКəрілері кездік aп жая жонды.\nҚымызы бар, еті бар, аты барлар\nРақатқа бөленіп қарық болды.\n***\nСəске еді.",
+    "type": "prose",
+    "language": "kk",
+    "moods": [
+      "ғашықтық",
       "мұң",
+      "шабыт"
+    ],
+    "topics": [
+      "кітап",
+      "поэма"
+    ],
+    "reader_intents": [
+      "түсіну",
+      "үміт"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 14,
+    "review_status": "approved",
+    "character_name": "Сәбит Мұқанов",
+    "character_situation": "«Сұлушаш» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_04",
+    "book_id": "gd_04",
+    "chapter_id": "ch_3",
+    "start_offset": 1183,
+    "end_offset": 1469,
+    "continuation_anchor": "frag_drive_gd_04",
+    "text": "Жем түскендей көрінеді\nҚамыққанда көңілің.\nАналар кім, əкемдер емес пе өздері?\nБенволио.\nИə, солар.\nБұл неткен қайғы тұңғиық\nЗапыран жұтқызып, зар илеткен соншама?\nР о м е о.\nОндай уды ортайтатын күш қайда?\nБенволио.\nМахаббат аңсап, қараптан-қарап\nЗари қаппасаң неткені?\nР о м е о.\nЖоқ.",
+    "type": "prose",
+    "language": "kk",
+    "moods": [
+      "ғашықтық",
+      "мұң",
+      "шабыт"
+    ],
+    "topics": [
+      "кітап",
+      "трагедия"
+    ],
+    "reader_intents": [
+      "түсіну",
+      "үміт"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 14,
+    "review_status": "approved",
+    "character_name": "Уильям Шекспир (ауд. Ә. Кекілбаев)",
+    "character_situation": "«Ромео мен Джульетта» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_07",
+    "book_id": "gd_07",
+    "chapter_id": "ch_3",
+    "start_offset": 0,
+    "end_offset": 259,
+    "continuation_anchor": "frag_drive_gd_07",
+    "text": "Енді менің де екі иығым селкілдей жөнелді. Мəліктің мойнынан\nқұшақтап, басына басымды түйістіріп, ішек-сілем қатқанша күлдім.\nШынында да, бұл бір қызық, бұл бір таза, бұл бір адал сағыныш еді.\n– Иə, иə... содан соң... – дедім мен езуімді жия алмай.\n– Сосын...",
+    "type": "prose",
+    "language": "kk",
+    "moods": [
+      "уайым",
+      "шаршау",
       "жалғыздық"
     ],
     "topics": [
-      "диалог",
-      "өмір"
+      "кітап",
+      "заманауи проза"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 14,
+    "review_status": "approved",
+    "character_name": "Нұрғали Ораз",
+    "character_situation": "«Түнгі жалғыздық» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_08",
+    "book_id": "gd_08",
+    "chapter_id": "ch_3",
+    "start_offset": 0,
+    "end_offset": 417,
+    "continuation_anchor": "frag_drive_gd_08",
+    "text": "мырзалардың баққаны күнде кешке ойын, күлкі, сауық, қызойнақ, ән салу,\nөлең айту. Жақсы әнші, домбырашылар көп. Бас қосып жиналса, күжілдепкуілдеп, сылқ-сылқ күліп, бірін-бірі сықақ қылғаннан басқа жұмыстары жоқ.\nБолыстың, старшынның, билердің бәрі — жуан, дүмді мырзалар.\nЖиналып отырып сөйлескендеріне қарап отырсаң, бәрі де көкке тойып\nтоптанып, топырақ шашып, күжілдеген бұқалар тәрізді. Маңқиған семіз\n8\nӘдеби KZ",
+    "type": "prose",
+    "language": "kk",
+    "moods": [
+      "шабыт",
+      "мұң",
+      "шытырман іздеу"
+    ],
+    "topics": [
+      "кітап",
+      "тарихи мемуар"
+    ],
+    "reader_intents": [
+      "түсіну",
+      "оқиғаға ену"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 14,
+    "review_status": "approved",
+    "character_name": "Сәкен Сейфуллин",
+    "character_situation": "«Тар жол, тайғақ кешу» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_book_016",
+    "book_id": "book_016",
+    "chapter_id": "ch_9",
+    "start_offset": 0,
+    "end_offset": 360,
+    "continuation_anchor": "frag_drive_book_016",
+    "text": "қатысқан батыр – Бауыржан Момышұлы. А.Бек бұл еңбегін батырдың\nҽңгімелері мен еске түсірулерінің желісімен жазған болатын.\nБауыржан Момышұлы – «Офицердің күнделігі», «Бір түннің тарихы»,\n«Москва үшін шайқас» ҽңгімелерінің, генерал И.В.Панфилов туралы «Біздің\nгенерал» ҿмірбаяндық повестінің, «Біздің отбасы» атты повестер мен ҽңгімелер\nжинағы кітабының авторы.",
+    "type": "prose",
+    "language": "kk",
+    "moods": [
+      "шабыт",
+      "мұң",
+      "шытырман іздеу"
+    ],
+    "topics": [
+      "кітап",
+      "өмірбаян"
+    ],
+    "reader_intents": [
+      "түсіну",
+      "оқиғаға ену"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 12,
+    "review_status": "approved",
+    "character_name": "Бауыржан Момышұлы",
+    "character_situation": "«Ұшқан ұя» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_10",
+    "book_id": "gd_10",
+    "chapter_id": "ch_3",
+    "start_offset": 0,
+    "end_offset": 343,
+    "continuation_anchor": "frag_drive_gd_10",
+    "text": "дық əрекетін күшейте бастаған, діннен айыра бастаған уақытына\nкеледі» дегенді айтады.\nДемек, манағы біз айтқан əдебиеттегі орыстанудың, отарланудың басталған дəуірі, орысты жұлдызға шығарудың бастамасы,\nміне, осы еді.\nАл «Орыс қаламгерлерін аудару Абайдан басталып, осы\nжылдарға дейін жалғасын тапқан жоқ па?» деген сұрақ тууы да\nəбден мүмкін.",
+    "type": "prose",
+    "language": "kk",
+    "moods": [
+      "уайым",
+      "шаршау",
+      "жалғыздық"
+    ],
+    "topics": [
+      "кітап",
+      "психологиялық проза"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 14,
+    "review_status": "approved",
+    "character_name": "Қазақ прозасы",
+    "character_situation": "«Жалғыздық үні» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_11",
+    "book_id": "gd_11",
+    "chapter_id": "ch_3",
+    "start_offset": 0,
+    "end_offset": 366,
+    "continuation_anchor": "frag_drive_gd_11",
+    "text": "«Бай», «кедей» деген сөздерді үлкендер аузынан естігеніміз болмаса, мағынасына онша түсініп жатпайтынбыз. Біздер үшін колхоз бастық бар, бригадир бар және\nқатардағы жәй колхозшылар бар. Бай боп тұрған ешкім\nжоқ, және бір кезде, яғни біз тумастан не бәрі он-он бес\nжыл ғана бұрын бүкіл бір ауылдың малы тегіс бір\nадамның меншігі болды деген ақылымызға онша\nсыймайтын.",
+    "type": "prose",
+    "language": "kk",
+    "moods": [
+      "шабыт",
+      "мұң",
+      "шытырман іздеу"
+    ],
+    "topics": [
+      "кітап",
+      "повесть"
+    ],
+    "reader_intents": [
+      "түсіну",
+      "оқиғаға ену"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 12,
+    "review_status": "approved",
+    "character_name": "Сайын Мұратбеков",
+    "character_situation": "«Жабайы алма» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_12",
+    "book_id": "gd_12",
+    "chapter_id": "ch_3",
+    "start_offset": 0,
+    "end_offset": 180,
+    "continuation_anchor": "frag_drive_gd_12",
+    "text": "Менің сегізінші атам Ерназар—қалмақ. Соған қарағанда, біздің де\nқұл болуымыз керек қой. Бірақ, сырттан айтса өздері біледі, ал,\nкөзімізді бадырайтып, ешкім де «құлсың» дей алмаған.",
+    "type": "prose",
+    "language": "kk",
+    "moods": [
+      "ғашықтық",
+      "мұң",
+      "шабыт"
+    ],
+    "topics": [
+      "кітап",
+      "роман"
+    ],
+    "reader_intents": [
+      "түсіну",
+      "үміт"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 14,
+    "review_status": "approved",
+    "character_name": "Сәбит Мұқанов",
+    "character_situation": "«Мөлдір махаббат» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_18",
+    "book_id": "gd_18",
+    "chapter_id": "ch_3",
+    "start_offset": 0,
+    "end_offset": 363,
+    "continuation_anchor": "frag_drive_gd_18",
+    "text": "АЛТЫНШЫ СӨЗ\nҚазақтың бір мақалы: «Өнер алды - бірлік, ырыс алды -тірлік» дейді.\nБірлік қандай елде болады, қайтсе тату болады - білмейді. Қазақ ойлайды:\nбірлік - ат ортақ, ас ортақ, киім ортақ, дәулет ортақ болса екен дейді. Олай\nболғанда байлықтан не пайда, кедейліктен не залал? Ағайын құрымай мал\nіздеп не керек? Жоқ, бірлік - ақылға бірлік, малға бірлік емес.",
+    "type": "prose",
+    "language": "kk",
+    "moods": [
+      "шабыт",
+      "мұң",
+      "шытырман іздеу"
+    ],
+    "topics": [
+      "кітап",
+      "жинақ"
+    ],
+    "reader_intents": [
+      "түсіну",
+      "оқиғаға ену"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 12,
+    "review_status": "approved",
+    "character_name": "Таңдамалы жинақ",
+    "character_situation": "«Қазақ әдеби жинағы» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_19",
+    "book_id": "gd_19",
+    "chapter_id": "ch_3",
+    "start_offset": 0,
+    "end_offset": 407,
+    "continuation_anchor": "frag_drive_gd_19",
+    "text": "все мысли, эмоции и внутренние диалоги, которые ежедневно\nрождаются внутри нас.\nТело автономно, оно мудрое и способно к невероятным\nчудесам ауторегенерации. Стоит только найти подход к самому\nсебе: выйти из боли и отучить мозг мыслить негативно.\nЕсли всего одна такая негативная мысль станет зацикленной, на\nтело немедленно обрушивается весь тот каскад эмоциональных\nпереживаний, который идет следом за ней.",
+    "type": "prose",
+    "language": "ru",
+    "moods": [
+      "уайым",
+      "шаршау",
+      "жалғыздық"
+    ],
+    "topics": [
+      "кітап",
+      "психология"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
+    "review_status": "approved",
+    "character_name": "Популярная психология",
+    "character_situation": "«Психосоматика: тело говорит» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_20",
+    "book_id": "gd_20",
+    "chapter_id": "ch_4",
+    "start_offset": 112,
+    "end_offset": 482,
+    "continuation_anchor": "frag_drive_gd_20",
+    "text": "Часть первая. Анализ игр\nСТРУКТУРНЫЙ АНАЛИЗ\nНаблюдения за спонтанной социальной деятельностью, которые\nлучше всего проводить в специальных психотерапевтических группах,\nобнаруживают, что время от времени разные аспекты поведения людей\n(позы, голос, точки зрения, разговорный словарь и т.п.) заметно\nменяются. Поведенческие изменения обычно сопровождаются\nэмоциональными.",
+    "type": "prose",
+    "language": "ru",
+    "moods": [
+      "уайым",
+      "шаршау",
+      "жалғыздық"
+    ],
+    "topics": [
+      "кітап",
+      "психология"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
+    "review_status": "approved",
+    "character_name": "Эрик Берн",
+    "character_situation": "«Игры, в которые играют люди» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_21",
+    "book_id": "gd_21",
+    "chapter_id": "ch_5",
+    "start_offset": 130,
+    "end_offset": 545,
+    "continuation_anchor": "frag_drive_gd_21",
+    "text": "бороться, жизни без боли не бывает. В кино такая красивая жизнь\n—\n\nкалорий и ежемесячная покупка пары образовательных онлайнкурсов, которые никогда не заканчиваешь, — это точно то, чего\nвам искренне хочется?\nВ\n\nжизни затмило собственное понимание нормы. Люди перестали\nстараться\nСтало\n\nвысоким требованиям социума. Решения все так же принимаешь\nне ты: общество уже решило, что надо делать, что покупать, что\nносить.",
+    "type": "dialogue",
+    "language": "ru",
+    "moods": [
+      "шабыт",
+      "шаршау",
+      "зерігу"
+    ],
+    "topics": [
+      "кітап",
+      "саморазвитие"
+    ],
+    "reader_intents": [
+      "үміт",
+      "түсіну"
+    ],
+    "hook_score": 0.94,
+    "dialogue_score": 0.96,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
+    "review_status": "approved",
+    "character_name": "Джеймс Эббот",
+    "character_situation": "«Пока мне не исполнилось 30» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_23",
+    "book_id": "gd_23",
+    "chapter_id": "ch_14",
+    "start_offset": 0,
+    "end_offset": 353,
+    "continuation_anchor": "frag_drive_gd_23",
+    "text": "Почему вы здесь?\n– Возможно, потому, что я не знаю ответа на этот вопрос, – сказал я\nи ткнул в меню пальцем. – Не зная точно, почему я здесь и что я хочу\nделать, я просто делаю то, что делает большинство людей.\n– И как, судя по вашему опыту, помогает ли делание того, что\nделает\n«большинство\nлюдей»,\nреализации\nцели\nвашего\nсуществования? – спросила она.",
+    "type": "dialogue",
+    "language": "ru",
+    "moods": [
+      "шабыт",
+      "уайым",
+      "шаршау"
+    ],
+    "topics": [
+      "кітап",
+      "философская повесть"
     ],
     "reader_intents": [
       "тыныштық",
       "түсіну"
     ],
     "hook_score": 0.94,
-    "dialogue_score": 0.98,
-    "emotional_relevance": 0.95,
-    "readability": 0.99,
-    "context_clarity": 0.97,
-    "age_min": 10,
+    "dialogue_score": 0.96,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 14,
     "review_status": "approved",
-    "character_name": "Терезеге қараған бала",
-    "character_situation": "Ұзақ күннен кейін бейтаныс терезедегі жылы жарықтан жұбаныш іздеген сәт.",
-    "dilemma": {
-      "question": "Күн сайын саған үміт сыйлайтын терезенің жарығы бір кеште өшіп қалса, есікті қағар ма едің?",
-      "options": [
-        "Иә, батылданып есікті қағамын",
-        "Алыстан бақылап, себебін түсінуге тырысамын"
-      ]
-    }
+    "character_name": "Джон Стрелеки",
+    "character_situation": "«Кафе на краю земли» кітабынан алынған түпнұсқа үзінді."
   },
   {
-    "id": "frag_orig_courage",
-    "book_id": "book_000",
-    "chapter_id": "ch_courage",
+    "id": "frag_drive_gd_24",
+    "book_id": "gd_24",
+    "chapter_id": "ch_3",
     "start_offset": 0,
-    "end_offset": 135,
-    "continuation_anchor": "frag_orig_courage",
-    "text": "— Сен қорықпайсың ба?\n— Қорқамын.\n— Онда неге бара жатырсың?\n— Өйткені қорыққан сайын қаша берсем, бір күні өзімнен де қашатын боламын.",
-    "type": "dialogue",
-    "language": "kk",
-    "dialogue_category": "батылдық",
+    "end_offset": 198,
+    "continuation_anchor": "frag_drive_gd_24",
+    "text": "совету, избегать пустых разговоров. Я могу сказать, что\nсейчас люди хорошо воспринимают то, что я хочу им сказать».\nТеперь вы видите сами как «Кармический мене­\nджмент» может оказаться вам полезным!",
+    "type": "prose",
+    "language": "ru",
     "moods": [
-      "уайым",
       "шабыт",
-      "шытырман іздеу"
+      "уайым",
+      "шаршау"
     ],
     "topics": [
-      "диалог",
-      "өмір"
+      "кітап",
+      "философия"
     ],
     "reader_intents": [
-      "үміт",
-      "оқиғаға ену"
+      "тыныштық",
+      "түсіну"
     ],
-    "hook_score": 0.94,
-    "dialogue_score": 0.98,
-    "emotional_relevance": 0.95,
-    "readability": 0.99,
-    "context_clarity": 0.97,
-    "age_min": 10,
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
     "review_status": "approved",
-    "character_name": "Айша",
-    "character_situation": "Қорқынышын мойындап, соған қарамастан алғашқы қадамды жасаған батыл сәт.",
-    "dilemma": {
-      "question": "Іштей қорқып тұрсаң да, маңызды қадамды жасау керек болса не істейсің?",
-      "options": [
-        "Қорқынышпен бірге алға қадам басамын",
-        "Алдымен дайындалып, өзіме сенім жинаймын"
-      ]
-    }
+    "character_name": "Майкл Роуч",
+    "character_situation": "«Кармический менеджмент» кітабынан алынған түпнұсқа үзінді."
   },
   {
-    "id": "frag_orig_ticket",
-    "book_id": "book_000",
-    "chapter_id": "ch_ticket",
-    "start_offset": 0,
-    "end_offset": 156,
-    "continuation_anchor": "frag_orig_ticket",
-    "text": "— Маған неге екі билет алдың?\n— Бірі саған.\n— Ал екіншісі кімге?\n— Қуанышыңды бірінші болып бөлісетін адамға.\n— Ондай адамым жоқ қой...\n— Ендеше, танысайық.",
-    "type": "dialogue",
-    "language": "kk",
-    "dialogue_category": "достық",
+    "id": "frag_drive_gd_25",
+    "book_id": "gd_25",
+    "chapter_id": "ch_3",
+    "start_offset": 1879,
+    "end_offset": 2270,
+    "continuation_anchor": "frag_drive_gd_25",
+    "text": "По традиции, в моем тексте будет много личного, но, как\nпоказывает опыт, порой одно лишь знание, что кто-то проходил через\nто же, что и ты, и испытывал то же, что и ты, приносит облегчение и\nпокой.\nЯ надеюсь, что моя книга подарит вам это спокойствие, станет\nисточником важных открытий и позволит под новым углом посмотреть\nна проблему, которая тревожит, – а то и вовсе подскажет ее решение.",
+    "type": "prose",
+    "language": "ru",
     "moods": [
-      "қуаныш",
-      "жалғыздық",
-      "ғашықтық"
-    ],
-    "topics": [
-      "диалог",
-      "өмір"
-    ],
-    "reader_intents": [
-      "күлкі",
-      "үміт"
-    ],
-    "hook_score": 0.94,
-    "dialogue_score": 0.98,
-    "emotional_relevance": 0.95,
-    "readability": 0.99,
-    "context_clarity": 0.97,
-    "age_min": 10,
-    "review_status": "approved",
-    "character_name": "Театр алдындағы бейтаныс",
-    "character_situation": "Күтпеген жылы сөзден жалғыздық сейіліп, жаңа достық басталған кеш."
-  },
-  {
-    "id": "frag_orig_letter",
-    "book_id": "book_000",
-    "chapter_id": "ch_letter",
-    "start_offset": 0,
-    "end_offset": 165,
-    "continuation_anchor": "frag_orig_letter",
-    "text": "— Сен маған неге жауап жазбадың?\n— Жаздым.\n— Бірақ бірде-бір хат келген жоқ.\n— Өйткені әр жазған хатымды жыртып тастадым.\n— Неге?\n— Сен мені кешірмейсің деп ойладым.",
-    "type": "dialogue",
-    "language": "kk",
-    "dialogue_category": "таңдау",
-    "moods": [
+      "ғашықтық",
       "мұң",
-      "жалғыздық",
-      "уайым"
+      "шабыт"
     ],
     "topics": [
-      "диалог",
-      "өмір"
+      "кітап",
+      "психология"
     ],
     "reader_intents": [
       "түсіну",
-      "тыныштық"
+      "үміт"
     ],
-    "hook_score": 0.94,
-    "dialogue_score": 0.98,
-    "emotional_relevance": 0.95,
-    "readability": 0.99,
-    "context_clarity": 0.97,
-    "age_min": 10,
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
     "review_status": "approved",
-    "character_name": "Хат жазған жан",
-    "character_situation": "Кешірім сұрауға батылы жетпей, айтылмаған сөздер ішінде қалған сәт."
+    "character_name": "Ольга Примаченко",
+    "character_situation": "«С тобой я дома» кітабынан алынған түпнұсқа үзінді."
   },
   {
-    "id": "frag_orig_cat",
-    "book_id": "book_000",
-    "chapter_id": "ch_cat",
+    "id": "frag_drive_gd_27",
+    "book_id": "gd_27",
+    "chapter_id": "ch_3",
     "start_offset": 0,
-    "end_offset": 160,
-    "continuation_anchor": "frag_orig_cat",
-    "text": "— Үйде кім бар?\n— Мен бармын!\n— Ал ата-анаң ше?\n— Олар мені үйде жалғыз қалдыруға болмайды деді.\n— Сонда?\n— Сондықтан көршінің мысығын бастық етіп тағайындадым.",
-    "type": "dialogue",
-    "language": "kk",
-    "dialogue_category": "әзіл",
+    "end_offset": 294,
+    "continuation_anchor": "frag_drive_gd_27",
+    "text": "Глава 1\nДеньги – всего лишь иллюзия, тень\nчего-то другого\nПервый шаг к обретению богатства – понять, что же это такое. И\nлишь немногие действительно знают, что такое богатство, какое оно и\nкак с ним быть. Что же это такое – богатство? Откуда оно берется? Где\nначинается то, что к нему приводит?",
+    "type": "prose",
+    "language": "ru",
     "moods": [
-      "қуаныш",
-      "шаршау",
-      "зерігу"
+      "шабыт",
+      "уайым",
+      "шаршау"
     ],
     "topics": [
-      "диалог",
-      "өмір"
+      "кітап",
+      "мышление"
     ],
     "reader_intents": [
-      "күлкі",
-      "оқиғаға ену"
+      "тыныштық",
+      "түсіну"
     ],
-    "hook_score": 0.94,
-    "dialogue_score": 0.98,
-    "emotional_relevance": 0.95,
-    "readability": 0.99,
-    "context_clarity": 0.97,
-    "age_min": 10,
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
     "review_status": "approved",
-    "character_name": "Тапқыр бала",
-    "character_situation": "Күнделікті күйбеңді жеңіл әзіл мен қиял арқылы көңілді хикаяға айналдырған сәт."
+    "character_name": "Дэвид Кэмерон Джиканди",
+    "character_situation": "«Счастливый карман, полный денег» кітабынан алынған түпнұсқа үзінді."
   },
   {
-    "id": "frag_orig_music",
-    "book_id": "book_000",
-    "chapter_id": "ch_music",
+    "id": "frag_drive_gd_28",
+    "book_id": "gd_28",
+    "chapter_id": "ch_4",
     "start_offset": 0,
-    "end_offset": 159,
-    "continuation_anchor": "frag_orig_music",
-    "text": "— Неге бүгін пианинода ойнамадың?\n— Көңілім жоқ.\n— Онда бір ғана нота басшы.\n— Бір нотадан музыка шықпайды ғой.\n— Бірақ музыка кейде сол бір нотадан басталады.",
-    "type": "dialogue",
-    "language": "kk",
-    "dialogue_category": "тосын шешім",
+    "end_offset": 393,
+    "continuation_anchor": "frag_drive_gd_28",
+    "text": "солдатом первой мировой войны, который был заколот штыком во\nФранции, и в результате мы смогли вместе устранить его боль.\nВдохновленный этим успехом, я начал экспериментировать:\nвозвращал некоторых пациентов в период, предшествовавший их\nпоследнему рождению на Земле. Сначала я был озабочен тем, что\nсоединение текущих проблем, убеждений и страхов вызовет фейерверк\nфантасмагорических образов.",
+    "type": "prose",
+    "language": "ru",
     "moods": [
-      "мұң",
+      "шабыт",
+      "уайым",
+      "шаршау"
+    ],
+    "topics": [
+      "кітап",
+      "философия"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 18,
+    "review_status": "approved",
+    "character_name": "Майкл Ньютон",
+    "character_situation": "«Путешествия души» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_29",
+    "book_id": "gd_29",
+    "chapter_id": "ch_3",
+    "start_offset": 2119,
+    "end_offset": 2422,
+    "continuation_anchor": "frag_drive_gd_29",
+    "text": "заставляло чувствовать себя пассажиром в собственной жизни. Также\nиз-за этого Кейт часто опаздывала на наши встречи.\nКогда Кейт окончила колледж, она надеялась в полной мере\nиспытать все те возможности, которые открываются перед человеком в\nдвадцать с лишним лет, и родители активно поощряли ее к этому.",
+    "type": "prose",
+    "language": "ru",
+    "moods": [
+      "уайым",
       "шаршау",
       "жалғыздық"
     ],
     "topics": [
-      "диалог",
-      "өмір"
+      "кітап",
+      "психология"
     ],
     "reader_intents": [
       "тыныштық",
-      "үміт"
+      "түсіну"
     ],
-    "hook_score": 0.94,
-    "dialogue_score": 0.98,
-    "emotional_relevance": 0.95,
-    "readability": 0.99,
-    "context_clarity": 0.97,
-    "age_min": 10,
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
     "review_status": "approved",
-    "character_name": "Пианино алдындағы қыз",
-    "character_situation": "Ең кішкентай алғашқы қадам арқылы ішкі күйзелістен шығу сәті."
+    "character_name": "Мэг Джей",
+    "character_situation": "«Важные годы» кітабынан алынған түпнұсқа үзінді."
   },
   {
-    "id": "frag_orig_road",
-    "book_id": "book_000",
-    "chapter_id": "ch_road",
+    "id": "frag_drive_gd_30",
+    "book_id": "gd_30",
+    "chapter_id": "ch_3",
     "start_offset": 0,
-    "end_offset": 176,
-    "continuation_anchor": "frag_orig_road",
-    "text": "— Біз адастық па?\n— Жоқ.\n— Онда неге картада бұл жол жоқ?\n— Өйткені оны біз бірінші болып тауып тұрмыз.\n— Бұл жақсы жаңалық па?\n— Әзірге білмеймін. Бірақ қызық болайын деп тұр.",
-    "type": "dialogue",
-    "language": "kk",
-    "dialogue_category": "батылдық",
+    "end_offset": 374,
+    "continuation_anchor": "frag_drive_gd_30",
+    "text": "его ярости являются отнюдь не Сабина или колбаса, а глубоко сидящая\nобида из прошлого: то обстоятельство, что его мама не принимала\nвсерьез его желания в детстве. Сабина своим упущением лишь\nподсыпала соли в эту старую рану. И поскольку Михаэль не осознает\nвзаимосвязи между реакцией на бытовую мелочь и обидой на свою\nмаму, он не может повлиять на свои чувства и поведение.",
+    "type": "prose",
+    "language": "ru",
     "moods": [
-      "шытырман іздеу",
-      "зерігу",
+      "уайым",
+      "шаршау",
+      "жалғыздық"
+    ],
+    "topics": [
+      "кітап",
+      "психология"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
+    "review_status": "approved",
+    "character_name": "Стефани Шталь",
+    "character_situation": "«Ребёнок в тебе должен обрести дом» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_31",
+    "book_id": "gd_31",
+    "chapter_id": "ch_3",
+    "start_offset": 0,
+    "end_offset": 311,
+    "continuation_anchor": "frag_drive_gd_31",
+    "text": "доктора Эгер присутствуют еще теплые, доверительные интонации, выработанные годами\nврачебной практики. Виктор Франкл показал психологию заключенных, бывших с ним в\nАушвице. Доктор Эгер предлагает нам психологию свободы.\nВ своей работе я долго изучал психологическую основу негативных форм\nобщественного влияния.",
+    "type": "prose",
+    "language": "ru",
+    "moods": [
+      "шабыт",
+      "уайым",
+      "шаршау"
+    ],
+    "topics": [
+      "кітап",
+      "биографии"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
+    "review_status": "approved",
+    "character_name": "Эдит Ева Эгер",
+    "character_situation": "«Выбор. О свободе и внутренней силе человека» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_32",
+    "book_id": "gd_32",
+    "chapter_id": "ch_3",
+    "start_offset": 0,
+    "end_offset": 399,
+    "continuation_anchor": "frag_drive_gd_32",
+    "text": "захотелось назвать его настоящее имя, потому что этот человек сыграл\nв моей жизни важную роль.\nИ последнее: когда я спросила Ричарда, как он относится к тому,\nчто в книге будет написано о его алкогольно-наркотическом прошлом,\nон сказал, что ничуть не возражает.\nРичард ответил: «Я и сам хотел, чтобы все об этом узнали, но не\nзнал, как лучше сказать».\nНо об этом потом. Сначала все-таки была Италия…",
+    "type": "prose",
+    "language": "ru",
+    "moods": [
+      "шабыт",
+      "уайым",
+      "шаршау"
+    ],
+    "topics": [
+      "кітап",
+      "роман"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
+    "review_status": "approved",
+    "character_name": "Элизабет Гилберт",
+    "character_situation": "«Есть, молиться, любить» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_33",
+    "book_id": "gd_33",
+    "chapter_id": "ch_15",
+    "start_offset": 0,
+    "end_offset": 112,
+    "continuation_anchor": "frag_drive_gd_33",
+    "text": "– Как я хотела бы, чтобы можно было послать мой букет папе.\nБоюсь, у него не такое веселое Рождество, как у нас.",
+    "type": "dialogue",
+    "language": "ru",
+    "moods": [
+      "шабыт",
+      "уайым",
+      "шаршау"
+    ],
+    "topics": [
+      "кітап",
+      "классика"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.94,
+    "dialogue_score": 0.96,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 12,
+    "review_status": "approved",
+    "character_name": "Луиза Мэй Олкотт",
+    "character_situation": "«Маленькие женщины» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_34",
+    "book_id": "gd_34",
+    "chapter_id": "ch_5",
+    "start_offset": 0,
+    "end_offset": 168,
+    "continuation_anchor": "frag_drive_gd_34",
+    "text": "много состоятельных семей. Здесь когда-то жил Фрэнсис\nФицджеральд, и именно в этом месте он придумал город нуворишей\nУэст-Эгг, в котором поселил своего Великого Гэтсби.",
+    "type": "prose",
+    "language": "ru",
+    "moods": [
+      "шабыт",
+      "уайым",
+      "шаршау"
+    ],
+    "topics": [
+      "кітап",
+      "искусство"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
+    "review_status": "approved",
+    "character_name": "Полин Браун",
+    "character_situation": "«Эстетический интеллект» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_35",
+    "book_id": "gd_35",
+    "chapter_id": "ch_4",
+    "start_offset": 0,
+    "end_offset": 379,
+    "continuation_anchor": "frag_drive_gd_35",
+    "text": "Помню все как вчера, да и вряд ли хоть одна подробность из жизни\nсемьи Тредгуд могла ускользнуть из моей памяти. Бог мой, разве такое\nвозможно! Я ведь с самого рождения жила по соседству с Тредгудами,\nа потом вышла замуж за одного из их мальчиков.\nДетей у них было девять человек. Трое из них — Эсси Ру и\nблизняшки — примерно моего возраста, вот я и торчала там все дни\nнапролет.",
+    "type": "prose",
+    "language": "ru",
+    "moods": [
+      "шабыт",
+      "уайым",
+      "шаршау"
+    ],
+    "topics": [
+      "кітап",
+      "роман"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 14,
+    "review_status": "approved",
+    "character_name": "Фэнни Флэгг",
+    "character_situation": "«Жареные зелёные помидоры в кафе «Полустанок»» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_36",
+    "book_id": "gd_36",
+    "chapter_id": "ch_4",
+    "start_offset": 0,
+    "end_offset": 281,
+    "continuation_anchor": "frag_drive_gd_36",
+    "text": "одновременно все более связанными с другими людьми, идеями,\nценностями и социальными группами. Радость потока – это высшая\nнаграда, которой может одарить нас природа за стремление к решению\nвсе более и более сложных осмысленных задач, и которую другим\nспособом получить невозможно.",
+    "type": "prose",
+    "language": "ru",
+    "moods": [
+      "уайым",
+      "шаршау",
+      "жалғыздық"
+    ],
+    "topics": [
+      "кітап",
+      "психология"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
+    "review_status": "approved",
+    "character_name": "Михай Чиксентмихайи",
+    "character_situation": "«Поток: Психология оптимального переживания» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_37",
+    "book_id": "gd_37",
+    "chapter_id": "ch_3",
+    "start_offset": 0,
+    "end_offset": 395,
+    "continuation_anchor": "frag_drive_gd_37",
+    "text": "На какое из писем человек скорее ответит? В каком ему проще\nразобраться? Какое письмо лучше побуждает к действию?\nТекст может показаться не самой важной частью нашей жизни особенно если вы не профессиональный писатель. Но от того, как мы\nформулируем мысли на письме, зависит очень многое: понимают нас\nили нет, прислушиваются ли к нам, делают ли другие то, что нам нужно,\nи что они о нас думают.",
+    "type": "prose",
+    "language": "ru",
+    "moods": [
+      "шабыт",
+      "уайым",
+      "шаршау"
+    ],
+    "topics": [
+      "кітап",
+      "мастерство текста"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 14,
+    "review_status": "approved",
+    "character_name": "Максим Ильяхов, Людмила Сарычева",
+    "character_situation": "«Пиши, сокращай» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_38",
+    "book_id": "gd_38",
+    "chapter_id": "ch_3",
+    "start_offset": 0,
+    "end_offset": 315,
+    "continuation_anchor": "frag_drive_gd_38",
+    "text": "• Желудочно-кишечный тракт – второй мозг человека. Вообщето говоря, ничего подобного. Это головной мозг на самом деле\nпротянул нервные импульсы практически к каждому миллиметру\nвашего тела, в том числе и разветвленную сеть нейронов у вас в\nживоте, которая ответственна за функционирование желудочнокишечного тракта.",
+    "type": "prose",
+    "language": "ru",
+    "moods": [
+      "шабыт",
+      "уайым",
+      "шаршау"
+    ],
+    "topics": [
+      "кітап",
+      "наука"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 14,
+    "review_status": "approved",
+    "character_name": "Рахул Джандиал",
+    "character_situation": "«Нейрофитнес» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_39",
+    "book_id": "gd_39",
+    "chapter_id": "ch_3",
+    "start_offset": 0,
+    "end_offset": 290,
+    "continuation_anchor": "frag_drive_gd_39",
+    "text": "встречается крайне редко, но оно доказывает, что отсутствие сна может\nубить человека.\nВторая возможная причина смерти – ситуация, когда\nневыспавшийся человек садится за руль. Вождение в состоянии\nнедосыпа каждый год становится причиной сотен тысяч дорожных\nпроисшествий с летальным исходом.",
+    "type": "prose",
+    "language": "ru",
+    "moods": [
+      "шабыт",
+      "уайым",
+      "шаршау"
+    ],
+    "topics": [
+      "кітап",
+      "наука"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 14,
+    "review_status": "approved",
+    "character_name": "Мэттью Уолкер",
+    "character_situation": "«Зачем мы спим» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_40",
+    "book_id": "gd_40",
+    "chapter_id": "ch_3",
+    "start_offset": 85,
+    "end_offset": 377,
+    "continuation_anchor": "frag_drive_gd_40",
+    "text": "Болезненное осознание того, как много трудностей мне еще предстояло преодолеть, пришло через год, когда я вернулся на бейсбольное поле. Бейсбол всегда был очень важной частью\nмоей жизни. Мой отец играл в Малой бейсбольной лиге за «Сент-Луис Кардиналс», и я тоже\nмечтал играть профессионально.",
+    "type": "prose",
+    "language": "ru",
+    "moods": [
+      "шабыт",
+      "шаршау",
+      "зерігу"
+    ],
+    "topics": [
+      "кітап",
+      "саморазвитие"
+    ],
+    "reader_intents": [
+      "үміт",
+      "түсіну"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 14,
+    "review_status": "approved",
+    "character_name": "Джеймс Клир",
+    "character_situation": "«Атомные привычки» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_41",
+    "book_id": "gd_41",
+    "chapter_id": "ch_7",
+    "start_offset": 0,
+    "end_offset": 427,
+    "continuation_anchor": "frag_drive_gd_41",
+    "text": "– Тут главное не говорить: «Да разведись ты с этим козлом!» И\nеще не надо говорить: «Да ничего страшного!» Не надо\nобесценивать ее проблему. Но постарайтесь показать, что она не\nодна и имеет полное право принять любое решение. Проявите\nделикатность: в моменты, когда человеку так тяжело, близкие не\nмогут заменить своим смыслом его потерянный. Не могут заменить\nсвоей жизнью его разрушенную. Но могут поддерживать и быть\nрядом.",
+    "type": "dialogue",
+    "language": "ru",
+    "moods": [
+      "уайым",
+      "шаршау",
+      "жалғыздық"
+    ],
+    "topics": [
+      "кітап",
+      "психология"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.94,
+    "dialogue_score": 0.96,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
+    "review_status": "approved",
+    "character_name": "Михаил Лабковский",
+    "character_situation": "«Хочу и буду» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_42",
+    "book_id": "gd_42",
+    "chapter_id": "ch_12",
+    "start_offset": 0,
+    "end_offset": 364,
+    "continuation_anchor": "frag_drive_gd_42",
+    "text": "Как обнаружить внутренние блоки и избавиться от них\n«Зачем же вы ждете помощи небес? Те, кто ищет, лишь\nзакрывают глаза. Свет сейчас у них внутри. Просветление –\nэто совсем не изменение, а лишь момент, когда ты вспомнил\nсебя».\n– КУРС ЧУДЕС\nВ детстве мы полны веры в себя и в мир. Мы чувствуем связь с\nним. Чувствуем защиту и любовь. Мы не задумываемся о будущем, а",
+    "type": "dialogue",
+    "language": "ru",
+    "moods": [
+      "шабыт",
+      "уайым",
+      "шаршау"
+    ],
+    "topics": [
+      "кітап",
+      "эссе"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.94,
+    "dialogue_score": 0.96,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
+    "review_status": "approved",
+    "character_name": "Поддержка и вдохновение",
+    "character_situation": "«Ты вся светишься» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_43",
+    "book_id": "gd_43",
+    "chapter_id": "ch_17",
+    "start_offset": 880,
+    "end_offset": 1036,
+    "continuation_anchor": "frag_drive_gd_43",
+    "text": "– Так ненавязчиво меня еще никто не отшивал, – смеюсь я.\nОчень важно в любых жизненных обстоятельствах жить так, чтобы\nбыло что ответить на вопрос «как ТЫ?»",
+    "type": "dialogue",
+    "language": "ru",
+    "moods": [
+      "уайым",
+      "шаршау",
+      "жалғыздық"
+    ],
+    "topics": [
+      "кітап",
+      "психология"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.94,
+    "dialogue_score": 0.96,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
+    "review_status": "approved",
+    "character_name": "Анна Бабич",
+    "character_situation": "«ПроЖИВАЯ» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_44",
+    "book_id": "gd_44",
+    "chapter_id": "ch_9",
+    "start_offset": 0,
+    "end_offset": 268,
+    "continuation_anchor": "frag_drive_gd_44",
+    "text": "дизайнерам, которые сделали обложку и текст выделяющимися,\nпонятными и красивыми.\nКак это обычно бывает, всем хорошим в этой книге мы во многом\nобязаны другим людям, а все ошибки и упущения лежат\nисключительно на наших плечах.\n– Дуг, Брюс и Шейла\nКембридж, Массачусетс",
+    "type": "dialogue",
+    "language": "ru",
+    "moods": [
+      "шабыт",
+      "уайым",
+      "шаршау"
+    ],
+    "topics": [
+      "кітап",
+      "коммуникация"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.94,
+    "dialogue_score": 0.96,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
+    "review_status": "approved",
+    "character_name": "Дуглас Стоун",
+    "character_situation": "«Неудобные разговоры» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_45",
+    "book_id": "gd_45",
+    "chapter_id": "ch_10",
+    "start_offset": 0,
+    "end_offset": 392,
+    "continuation_anchor": "frag_drive_gd_45",
+    "text": "самом деле не работа.\n– Простите, это как? Вы не работаете? – в ее глазах заискрился\nсмех. – Неудивительно, что люди считают его таким замечательным\nруководителем!\n– Нет, все совсем не так.\n– Но вы только что сказали…\n– Да, знаю. Это звучит сложно, но на деле довольно просто. И это\nеще одна черта, которая делает Томаса таким замечательным\nруководителем. Он делает руководство простым делом.",
+    "type": "dialogue",
+    "language": "ru",
+    "moods": [
+      "шабыт",
+      "уайым",
+      "шаршау"
+    ],
+    "topics": [
+      "кітап",
+      "повесть"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.94,
+    "dialogue_score": 0.96,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 14,
+    "review_status": "approved",
+    "character_name": "Джон Стрелеки",
+    "character_situation": "«Большая пятёрка для жизни» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_46",
+    "book_id": "gd_46",
+    "chapter_id": "ch_3",
+    "start_offset": 64,
+    "end_offset": 369,
+    "continuation_anchor": "frag_drive_gd_46",
+    "text": "Почему так много историй любви\nзаканчиваются печально?\n«Господи, сделай так, чтобы эта история не кончилась\nпечально!» — сказано о любви в одном из романов Мартина Сутера. Та история и впрямь закончилась грустно.\nВпрочем, надежда осталась — пусть чувства терпят крах,\nзато главный герой обретает зрелость.",
+    "type": "prose",
+    "language": "ru",
+    "moods": [
+      "ғашықтық",
+      "мұң",
       "шабыт"
     ],
     "topics": [
-      "диалог",
-      "өмір"
+      "кітап",
+      "романтика"
     ],
     "reader_intents": [
-      "оқиғаға ену",
+      "түсіну",
       "үміт"
     ],
-    "hook_score": 0.94,
-    "dialogue_score": 0.98,
-    "emotional_relevance": 0.95,
-    "readability": 0.99,
-    "context_clarity": 0.97,
-    "age_min": 10,
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
     "review_status": "approved",
-    "character_name": "Жолаушылар",
-    "character_situation": "Картада жоқ жаңа соқпаққа түсіп, белгісіздіктен қызық көрген сәт."
+    "character_name": "Роман / Отношения",
+    "character_situation": "«Любит не любит» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_47",
+    "book_id": "gd_47",
+    "chapter_id": "ch_11",
+    "start_offset": 0,
+    "end_offset": 318,
+    "continuation_anchor": "frag_drive_gd_47",
+    "text": "Рис. 1\nВся прелесть накопительного эффекта в его простоте. Обратите\nвнимание, что в левой части диаграммы разница неощутима, а справа\n– разительна. Поведение остается прежним на протяжении всего\nвремени, а конечные результаты радикально отличаются от исходных\nданных. Это и есть накопительный эффект, и это потрясающе.",
+    "type": "dialogue",
+    "language": "ru",
+    "moods": [
+      "шабыт",
+      "уайым",
+      "шаршау"
+    ],
+    "topics": [
+      "кітап",
+      "привычки"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.94,
+    "dialogue_score": 0.96,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 14,
+    "review_status": "approved",
+    "character_name": "Даррен Харди",
+    "character_situation": "«Накопительный эффект» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_48",
+    "book_id": "gd_48",
+    "chapter_id": "ch_3",
+    "start_offset": 0,
+    "end_offset": 213,
+    "continuation_anchor": "frag_drive_gd_48",
+    "text": "• Ребенок не выключил компьютер, как только вы его об этом попросили?\n• Девушка отказалась от интимной близости, хотя вы были полны желания?\n• Муж отправился на вечеринку, когда вы надеялись провести вечер вместе?",
+    "type": "prose",
+    "language": "ru",
+    "moods": [
+      "уайым",
+      "шаршау",
+      "жалғыздық"
+    ],
+    "topics": [
+      "кітап",
+      "психология"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.88,
+    "dialogue_score": 0.7,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 16,
+    "review_status": "approved",
+    "character_name": "Алан Фромм",
+    "character_situation": "«Способность любить» кітабынан алынған түпнұсқа үзінді."
+  },
+  {
+    "id": "frag_drive_gd_49",
+    "book_id": "gd_49",
+    "chapter_id": "ch_10",
+    "start_offset": 0,
+    "end_offset": 352,
+    "continuation_anchor": "frag_drive_gd_49",
+    "text": "Часть I\nНачало\n(1819–1897)\n«Мне не надо говорить тебе, как я жажду твоего возвращения. Мы\nнеразделимы, и мне больно вынуждать тебя оставаться [вдали] пока ты\nне приведешь наш бизнес к наивысшему уровню успеха из\nвозможных… Жду хороших вестей. Верь мне, мой дорогой Альфред.\nТвой преданный отец и друг».\n– Письмо Луи-Франсуа Картье Альфреду Картье, 1869",
+    "type": "dialogue",
+    "language": "ru",
+    "moods": [
+      "шабыт",
+      "уайым",
+      "шаршау"
+    ],
+    "topics": [
+      "кітап",
+      "биографии"
+    ],
+    "reader_intents": [
+      "тыныштық",
+      "түсіну"
+    ],
+    "hook_score": 0.94,
+    "dialogue_score": 0.96,
+    "emotional_relevance": 0.91,
+    "readability": 0.94,
+    "context_clarity": 0.91,
+    "age_min": 14,
+    "review_status": "approved",
+    "character_name": "Франческа Картье Бриккелл",
+    "character_situation": "«Картье: История ювелирного дома» кітабынан алынған түпнұсқа үзінді."
   },
   {
     "id": "frag_quest_01",
@@ -1072,1457 +2173,5 @@
     "review_status": "approved",
     "character_name": "Санжар",
     "character_situation": "Қараңғы кітапханада күдік тудырған бейтаныс жанның шын мәнінде ізденуші оқырман болып шығуы."
-  },
-  {
-    "id": "frag_gd_01",
-    "book_id": "book_027",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 330,
-    "continuation_anchor": "frag_gd_01",
-    "text": "етіп сұлап түсті.\nМаңайдан жұрт дабырлап жиылып қалып еді. Көксерек қара аланы\nтамағынан қысып буындырып тұрып-тұрып қоя берді де, жотасы күдірейіп\nтоптан шыға берді.\nЖеңген жаудың сығымынан зорға құтылған қара ала қаңсылап, жүні\nжығылып, бір жаққа кетті.\nОсы оқиғаның ертеңінде кешке жақын ауыл жанында жатқан қойға қасқыр\nшапты.",
-    "type": "prose",
-    "language": "kk",
-    "moods": [
-      "шабыт",
-      "мұң",
-      "шытырман іздеу"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 12,
-    "review_status": "approved",
-    "character_name": "Мұхтар Әуезов",
-    "character_situation": "Көксерек шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_02",
-    "book_id": "gd_02",
-    "chapter_id": "ch_3",
-    "start_offset": 98,
-    "end_offset": 507,
-    "continuation_anchor": "frag_gd_02",
-    "text": "Құрамысов (жақтырмай, тыржың етіп). Иə!\nГ о лощекин (алара қарап). Не сыбыр-күбір?\nҚұрамысов. Жай, мына кісі...\nГолощекин. Түсінбей отыр ма? (Елеусізге таяп келіп.) Біздің арамызда\nда жаулар бар. Троцкийлер бар. Не істеу керек? (Құрамысовқа). Аудар.\nК ұ р а м ы с о в (Елеусіздің құлағына). Жау бар дейді. Не істеу керек\nдейді.\nЕ л е у с і з. А-а. Жау ма? Жауды аяған жаралы. Иə. кұрту керек. Мен\nқол көтерем.",
-    "type": "prose",
-    "language": "kk",
-    "moods": [
-      "шабыт",
-      "мұң",
-      "шытырман іздеу"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Шерхан Мұртаза",
-    "character_situation": "Бесеудің хаты шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_03",
-    "book_id": "book_036",
-    "chapter_id": "ch_3",
-    "start_offset": 828,
-    "end_offset": 1196,
-    "continuation_anchor": "frag_gd_03",
-    "text": "Лашық үйдей биелер, жалын жайған,\nТалай-талай айғырдың сауырына,\nЖылдағы ырым,— ақ-ала құйылды айран.\nӨзеннің өнебойы елге толды,\nҚыс бытырап кеткендер қоңсы қонды.\nКезек-кезек ерулік əкелісіп,\nЕл менен ел жүргізді «ата жолды».\nЖастау жағы қымыз бен қызды бағып,\nКəрілері кездік aп жая жонды.\nҚымызы бар, еті бар, аты барлар\nРақатқа бөленіп қарық болды.\n***\nСəске еді.",
-    "type": "prose",
-    "language": "kk",
-    "moods": [
-      "шабыт",
-      "мұң",
-      "шытырман іздеу"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Сәбит Мұқанов",
-    "character_situation": "Сұлушаш шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_04",
-    "book_id": "gd_04",
-    "chapter_id": "ch_3",
-    "start_offset": 1183,
-    "end_offset": 1469,
-    "continuation_anchor": "frag_gd_04",
-    "text": "Жем түскендей көрінеді\nҚамыққанда көңілің.\nАналар кім, əкемдер емес пе өздері?\nБенволио.\nИə, солар.\nБұл неткен қайғы тұңғиық\nЗапыран жұтқызып, зар илеткен соншама?\nР о м е о.\nОндай уды ортайтатын күш қайда?\nБенволио.\nМахаббат аңсап, қараптан-қарап\nЗари қаппасаң неткені?\nР о м е о.\nЖоқ.",
-    "type": "prose",
-    "language": "kk",
-    "moods": [
-      "шабыт",
-      "мұң",
-      "шытырман іздеу"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Уильям Шекспир (ауд. Ә. Кекілбаев)",
-    "character_situation": "Ромео мен Джульетта шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_07",
-    "book_id": "gd_07",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 259,
-    "continuation_anchor": "frag_gd_07",
-    "text": "Енді менің де екі иығым селкілдей жөнелді. Мəліктің мойнынан\nқұшақтап, басына басымды түйістіріп, ішек-сілем қатқанша күлдім.\nШынында да, бұл бір қызық, бұл бір таза, бұл бір адал сағыныш еді.\n– Иə, иə... содан соң... – дедім мен езуімді жия алмай.\n– Сосын...",
-    "type": "prose",
-    "language": "kk",
-    "moods": [
-      "шабыт",
-      "мұң",
-      "шытырман іздеу"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Нұрғали Ораз",
-    "character_situation": "Түнгі жалғыздық шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_08",
-    "book_id": "gd_08",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 417,
-    "continuation_anchor": "frag_gd_08",
-    "text": "мырзалардың баққаны күнде кешке ойын, күлкі, сауық, қызойнақ, ән салу,\nөлең айту. Жақсы әнші, домбырашылар көп. Бас қосып жиналса, күжілдепкуілдеп, сылқ-сылқ күліп, бірін-бірі сықақ қылғаннан басқа жұмыстары жоқ.\nБолыстың, старшынның, билердің бәрі — жуан, дүмді мырзалар.\nЖиналып отырып сөйлескендеріне қарап отырсаң, бәрі де көкке тойып\nтоптанып, топырақ шашып, күжілдеген бұқалар тәрізді. Маңқиған семіз\n8\nӘдеби KZ",
-    "type": "dialogue",
-    "language": "kk",
-    "moods": [
-      "шабыт",
-      "мұң",
-      "шытырман іздеу"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.91,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Сәкен Сейфуллин",
-    "character_situation": "Тар жол, тайғақ кешу шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_10",
-    "book_id": "gd_10",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 343,
-    "continuation_anchor": "frag_gd_10",
-    "text": "дық əрекетін күшейте бастаған, діннен айыра бастаған уақытына\nкеледі» дегенді айтады.\nДемек, манағы біз айтқан əдебиеттегі орыстанудың, отарланудың басталған дəуірі, орысты жұлдызға шығарудың бастамасы,\nміне, осы еді.\nАл «Орыс қаламгерлерін аудару Абайдан басталып, осы\nжылдарға дейін жалғасын тапқан жоқ па?» деген сұрақ тууы да\nəбден мүмкін.",
-    "type": "prose",
-    "language": "kk",
-    "moods": [
-      "шабыт",
-      "мұң",
-      "шытырман іздеу"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Қазақ прозасы",
-    "character_situation": "Жалғыздық үні шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_11",
-    "book_id": "gd_11",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 366,
-    "continuation_anchor": "frag_gd_11",
-    "text": "«Бай», «кедей» деген сөздерді үлкендер аузынан естігеніміз болмаса, мағынасына онша түсініп жатпайтынбыз. Біздер үшін колхоз бастық бар, бригадир бар және\nқатардағы жәй колхозшылар бар. Бай боп тұрған ешкім\nжоқ, және бір кезде, яғни біз тумастан не бәрі он-он бес\nжыл ғана бұрын бүкіл бір ауылдың малы тегіс бір\nадамның меншігі болды деген ақылымызға онша\nсыймайтын.",
-    "type": "prose",
-    "language": "kk",
-    "moods": [
-      "шабыт",
-      "мұң",
-      "шытырман іздеу"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 12,
-    "review_status": "approved",
-    "character_name": "Сайын Мұратбеков",
-    "character_situation": "Жабайы алма шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_12",
-    "book_id": "gd_12",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 180,
-    "continuation_anchor": "frag_gd_12",
-    "text": "Менің сегізінші атам Ерназар—қалмақ. Соған қарағанда, біздің де\nқұл болуымыз керек қой. Бірақ, сырттан айтса өздері біледі, ал,\nкөзімізді бадырайтып, ешкім де «құлсың» дей алмаған.",
-    "type": "prose",
-    "language": "kk",
-    "moods": [
-      "шабыт",
-      "мұң",
-      "шытырман іздеу"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Сәбит Мұқанов",
-    "character_situation": "Мөлдір махаббат шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_13",
-    "book_id": "gd_13",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 369,
-    "continuation_anchor": "frag_gd_13",
-    "text": "Шын журектен шыкдан асыл т т е к , жацсы сездер\nАллага ж е т т турады. Шынайы кез жасымен жуыл?ан\nыцыласты дyfaлap, жан-журектен шыкк,ан мЫэжат\nОныц дэргейж де к,абыл болады.\nМ уктаждардын кездер1 Оган телм1рш, колдары\nOfaH усынылады. К,иын уак,ыттарда юм болса да одан\nжэрдем сурап жалбарынады.\nАлланы ц eciMiH бу дуниеде миллиондаган адам\nток,таусыз к,айталап турады.",
-    "type": "prose",
-    "language": "kk",
-    "moods": [
-      "шабыт",
-      "мұң",
-      "шытырман іздеу"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Аид әл-Қарни (ауд.)",
-    "character_situation": "Мұңайма шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_14",
-    "book_id": "gd_14",
-    "chapter_id": "ch_3",
-    "start_offset": 109,
-    "end_offset": 366,
-    "continuation_anchor": "frag_gd_14",
-    "text": "MiHdemmi т урде ман,сатыцызга жетес1з. Бул ете мацызды!\nШынымды айтсам, вз1м де бутан кеп сене бермейтшмш.\nЕгер интернеттен кездесулер1мд1 керсещз, меш куаттандырып турган бащ>1Т узак жолдын, натижес! екенш\nбайк,айсыз. Алгашында ез1ме керек дуниенщ ешкдйсы9",
-    "type": "prose",
-    "language": "kk",
-    "moods": [
-      "шабыт",
-      "мұң",
-      "шытырман іздеу"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 12,
-    "review_status": "approved",
-    "character_name": "Ник Вуйчич",
-    "character_situation": "Өмірде шектеу жоқ шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_15",
-    "book_id": "gd_15",
-    "chapter_id": "ch_3",
-    "start_offset": 833,
-    "end_offset": 1201,
-    "continuation_anchor": "frag_gd_15",
-    "text": "дамдатгы. Бултарган аттайвелосипедл булт-булт етюзш, кызга\n6ipa3 кокан-локы керсетп.\n—Жендеп жур, жыгасьщ!- деп, кыз Манаптыц кыр жотасына жудырыгымен нукып-нукып койды. Оган жштгщ жаны\nKipin, жацагысын жишете туст!\n— Крркэды дейм1сщ, жыгылсам, сеш де ала тусем,- деп,\nСара Манаптьщ белшен мыктап устап алды. Бала жтт була\nмшезге басты.\n—Сара, каттырак кысшы!\n— H eHi?",
-    "type": "dialogue",
-    "language": "kk",
-    "moods": [
-      "шабыт",
-      "мұң",
-      "шытырман іздеу"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.91,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Стефан Цвейг (ауд.)",
-    "character_situation": "Бейтаныс әйелдің құпиясы шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_18",
-    "book_id": "gd_18",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 363,
-    "continuation_anchor": "frag_gd_18",
-    "text": "АЛТЫНШЫ СӨЗ\nҚазақтың бір мақалы: «Өнер алды - бірлік, ырыс алды -тірлік» дейді.\nБірлік қандай елде болады, қайтсе тату болады - білмейді. Қазақ ойлайды:\nбірлік - ат ортақ, ас ортақ, киім ортақ, дәулет ортақ болса екен дейді. Олай\nболғанда байлықтан не пайда, кедейліктен не залал? Ағайын құрымай мал\nіздеп не керек? Жоқ, бірлік - ақылға бірлік, малға бірлік емес.",
-    "type": "prose",
-    "language": "kk",
-    "moods": [
-      "шабыт",
-      "мұң",
-      "шытырман іздеу"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 12,
-    "review_status": "approved",
-    "character_name": "Таңдамалы жинақ",
-    "character_situation": "Қазақ әдеби жинағы шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_19",
-    "book_id": "gd_19",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 407,
-    "continuation_anchor": "frag_gd_19",
-    "text": "все мысли, эмоции и внутренние диалоги, которые ежедневно\nрождаются внутри нас.\nТело автономно, оно мудрое и способно к невероятным\nчудесам ауторегенерации. Стоит только найти подход к самому\nсебе: выйти из боли и отучить мозг мыслить негативно.\nЕсли всего одна такая негативная мысль станет зацикленной, на\nтело немедленно обрушивается весь тот каскад эмоциональных\nпереживаний, который идет следом за ней.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Популярная психология",
-    "character_situation": "Психосоматика: тело говорит шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_20",
-    "book_id": "gd_20",
-    "chapter_id": "ch_4",
-    "start_offset": 112,
-    "end_offset": 482,
-    "continuation_anchor": "frag_gd_20",
-    "text": "Часть первая. Анализ игр\nСТРУКТУРНЫЙ АНАЛИЗ\nНаблюдения за спонтанной социальной деятельностью, которые\nлучше всего проводить в специальных психотерапевтических группах,\nобнаруживают, что время от времени разные аспекты поведения людей\n(позы, голос, точки зрения, разговорный словарь и т.п.) заметно\nменяются. Поведенческие изменения обычно сопровождаются\nэмоциональными.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Эрик Берн",
-    "character_situation": "Игры, в которые играют люди шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_21",
-    "book_id": "gd_21",
-    "chapter_id": "ch_3",
-    "start_offset": 1023,
-    "end_offset": 1264,
-    "continuation_anchor": "frag_gd_21",
-    "text": "некотором смысле ждем. Для нас страдание — это форма жизни.\nУ таких людей сформирован ряд установок: за все надо бороться,\nбыстро и просто не бывает, деньги невозможно зарабатывать с\nлегкостью и удовольствием, а достойный уровень жизни — для",
-    "type": "dialogue",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.91,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Джеймс Эббот",
-    "character_situation": "Пока мне не исполнилось 30 шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_22",
-    "book_id": "gd_22",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 482,
-    "continuation_anchor": "frag_gd_22",
-    "text": "проносится перед глазами, а в ней моя история страдания, моя боль. Рывок, еще рывок, еще один, последний!\n«Давааааай, Оскар!» — слова тренера пробиваются\nчерез людской шум. Все! Мимолетный взгляд на монитор, 13,3 секунды! Рекорд! Внезапно арена становится очень шумной. Силы покидают меня. Сознание\nзатуманено, но я четко вижу черный силуэт напротив.\nОн больше не гребет, он вытягивает в мою сторону руку\nс поднятым вверх пальцем.\n— GOOD JOB, OSKAR! GOOD JOB! Хорошая\nработа, Оскар!",
-    "type": "dialogue",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.91,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Оскар Хартманн",
-    "character_situation": "Просто делай! шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_23",
-    "book_id": "gd_23",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 380,
-    "continuation_anchor": "frag_gd_23",
-    "text": "Глава 2\nВ то время, прежде чем отправляться в поездку, я распечатывал\nмаршрут из Интернета. Это казалось мне верхом разумности. «И\nникакая карта не нужна, – думал я. – Все, что мне надо делать, –\nпросто следовать этим четким указаниям».\nНо теперь от них не было никакого проку, и я включил телефон,\nчтобы загрузить карты. «Система недоступна» – раз за разом\nвыскакивало на экране.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Джон Стрелеки",
-    "character_situation": "Кафе на краю земли шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_24",
-    "book_id": "gd_24",
-    "chapter_id": "ch_5",
-    "start_offset": 934,
-    "end_offset": 1343,
-    "continuation_anchor": "frag_gd_24",
-    "text": "себя: «Что бы я действительно хотел осуществить сейчас\nв своей жизни, какой проект? К какому сроку я бы хотел\nего завершить? Как будет выглядеть для меня успех в\nэтом проекте?»\nВсё это должно быть абсолютно ясной картинкой в\nвашем сознании до того, как вы приступите к изучению\nправил КМ. Мы вам расскажем, как осуществить ваши\nмечты так же, как мы осуществили наши, но мечтать —\nэто ваша часть в этой работе.",
-    "type": "dialogue",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.91,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Майкл Роуч",
-    "character_situation": "Кармический менеджмент шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_25",
-    "book_id": "gd_25",
-    "chapter_id": "ch_3",
-    "start_offset": 1879,
-    "end_offset": 2270,
-    "continuation_anchor": "frag_gd_25",
-    "text": "По традиции, в моем тексте будет много личного, но, как\nпоказывает опыт, порой одно лишь знание, что кто-то проходил через\nто же, что и ты, и испытывал то же, что и ты, приносит облегчение и\nпокой.\nЯ надеюсь, что моя книга подарит вам это спокойствие, станет\nисточником важных открытий и позволит под новым углом посмотреть\nна проблему, которая тревожит, – а то и вовсе подскажет ее решение.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Ольга Примаченко",
-    "character_situation": "С тобой я дома шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_26",
-    "book_id": "gd_26",
-    "chapter_id": "ch_3",
-    "start_offset": 1775,
-    "end_offset": 1938,
-    "continuation_anchor": "frag_gd_26",
-    "text": "Мари Форлео, создатель тренинга В-School, лауреат премии\nВебби-2012 в номинации «Лучшая личность/ведущий» со\nсвоим проектом MarieTV, владелец сайта MarieForleo.com",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Джефф Уокер",
-    "character_situation": "Запуск: Быстрый старт для вашего бизнеса шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_27",
-    "book_id": "gd_27",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 294,
-    "continuation_anchor": "frag_gd_27",
-    "text": "Глава 1\nДеньги – всего лишь иллюзия, тень\nчего-то другого\nПервый шаг к обретению богатства – понять, что же это такое. И\nлишь немногие действительно знают, что такое богатство, какое оно и\nкак с ним быть. Что же это такое – богатство? Откуда оно берется? Где\nначинается то, что к нему приводит?",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Дэвид Кэмерон Джиканди",
-    "character_situation": "Счастливый карман, полный денег шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_28",
-    "book_id": "gd_28",
-    "chapter_id": "ch_4",
-    "start_offset": 0,
-    "end_offset": 393,
-    "continuation_anchor": "frag_gd_28",
-    "text": "солдатом первой мировой войны, который был заколот штыком во\nФранции, и в результате мы смогли вместе устранить его боль.\nВдохновленный этим успехом, я начал экспериментировать:\nвозвращал некоторых пациентов в период, предшествовавший их\nпоследнему рождению на Земле. Сначала я был озабочен тем, что\nсоединение текущих проблем, убеждений и страхов вызовет фейерверк\nфантасмагорических образов.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 18,
-    "review_status": "approved",
-    "character_name": "Майкл Ньютон",
-    "character_situation": "Путешествия души шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_29",
-    "book_id": "gd_29",
-    "chapter_id": "ch_3",
-    "start_offset": 2119,
-    "end_offset": 2422,
-    "continuation_anchor": "frag_gd_29",
-    "text": "заставляло чувствовать себя пассажиром в собственной жизни. Также\nиз-за этого Кейт часто опаздывала на наши встречи.\nКогда Кейт окончила колледж, она надеялась в полной мере\nиспытать все те возможности, которые открываются перед человеком в\nдвадцать с лишним лет, и родители активно поощряли ее к этому.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Мэг Джей",
-    "character_situation": "Важные годы шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_30",
-    "book_id": "gd_30",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 374,
-    "continuation_anchor": "frag_gd_30",
-    "text": "его ярости являются отнюдь не Сабина или колбаса, а глубоко сидящая\nобида из прошлого: то обстоятельство, что его мама не принимала\nвсерьез его желания в детстве. Сабина своим упущением лишь\nподсыпала соли в эту старую рану. И поскольку Михаэль не осознает\nвзаимосвязи между реакцией на бытовую мелочь и обидой на свою\nмаму, он не может повлиять на свои чувства и поведение.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Стефани Шталь",
-    "character_situation": "Ребёнок в тебе должен обрести дом шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_31",
-    "book_id": "gd_31",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 311,
-    "continuation_anchor": "frag_gd_31",
-    "text": "доктора Эгер присутствуют еще теплые, доверительные интонации, выработанные годами\nврачебной практики. Виктор Франкл показал психологию заключенных, бывших с ним в\nАушвице. Доктор Эгер предлагает нам психологию свободы.\nВ своей работе я долго изучал психологическую основу негативных форм\nобщественного влияния.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Эдит Ева Эгер",
-    "character_situation": "Выбор. О свободе и внутренней силе человека шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_32",
-    "book_id": "gd_32",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 399,
-    "continuation_anchor": "frag_gd_32",
-    "text": "захотелось назвать его настоящее имя, потому что этот человек сыграл\nв моей жизни важную роль.\nИ последнее: когда я спросила Ричарда, как он относится к тому,\nчто в книге будет написано о его алкогольно-наркотическом прошлом,\nон сказал, что ничуть не возражает.\nРичард ответил: «Я и сам хотел, чтобы все об этом узнали, но не\nзнал, как лучше сказать».\nНо об этом потом. Сначала все-таки была Италия…",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Элизабет Гилберт",
-    "character_situation": "Есть, молиться, любить шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_33",
-    "book_id": "gd_33",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 331,
-    "continuation_anchor": "frag_gd_33",
-    "text": "заполнен книгами, на подоконниках цвели хризантемы и маленькие\nрозочки, и все кругом дышало домашним уютом и покоем.\nМаргарет, старшей из сестер, было шестнадцать, и она была очень\nхороша собой: полненькая и беленькая, с большими глазами, мягкими\nтемными волосами, прелестным ртом и белыми ручками, которыми\nона особенно гордилась.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 12,
-    "review_status": "approved",
-    "character_name": "Луиза Мэй Олкотт",
-    "character_situation": "Маленькие женщины шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_34",
-    "book_id": "gd_34",
-    "chapter_id": "ch_5",
-    "start_offset": 0,
-    "end_offset": 168,
-    "continuation_anchor": "frag_gd_34",
-    "text": "много состоятельных семей. Здесь когда-то жил Фрэнсис\nФицджеральд, и именно в этом месте он придумал город нуворишей\nУэст-Эгг, в котором поселил своего Великого Гэтсби.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Полин Браун",
-    "character_situation": "Эстетический интеллект шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_35",
-    "book_id": "gd_35",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 346,
-    "continuation_anchor": "frag_gd_35",
-    "text": "обожаю пахту с крекерами или кукурузным хлебом на завтрак.\nРазмочишь все в чашке и хлебаешь ложечкой. Но нельзя же есть на\nлюдях, как дома себе позволяешь, правда?\nИ еще скучаю по дереву. Мой домишко — старая развалюха:\nгостиная, спальня и кухонька. Но весь из дерева, и стены изнутри\nобиты сосной. За это и люблю его. Терпеть не могу штукатурку.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Фэнни Флэгг",
-    "character_situation": "Жареные зелёные помидоры в кафе «Полустанок» шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_36",
-    "book_id": "gd_36",
-    "chapter_id": "ch_4",
-    "start_offset": 0,
-    "end_offset": 281,
-    "continuation_anchor": "frag_gd_36",
-    "text": "одновременно все более связанными с другими людьми, идеями,\nценностями и социальными группами. Радость потока – это высшая\nнаграда, которой может одарить нас природа за стремление к решению\nвсе более и более сложных осмысленных задач, и которую другим\nспособом получить невозможно.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Михай Чиксентмихайи",
-    "character_situation": "Поток: Психология оптимального переживания шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_37",
-    "book_id": "gd_37",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 395,
-    "continuation_anchor": "frag_gd_37",
-    "text": "На какое из писем человек скорее ответит? В каком ему проще\nразобраться? Какое письмо лучше побуждает к действию?\nТекст может показаться не самой важной частью нашей жизни особенно если вы не профессиональный писатель. Но от того, как мы\nформулируем мысли на письме, зависит очень многое: понимают нас\nили нет, прислушиваются ли к нам, делают ли другие то, что нам нужно,\nи что они о нас думают.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Максим Ильяхов, Людмила Сарычева",
-    "character_situation": "Пиши, сокращай шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_38",
-    "book_id": "gd_38",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 315,
-    "continuation_anchor": "frag_gd_38",
-    "text": "• Желудочно-кишечный тракт – второй мозг человека. Вообщето говоря, ничего подобного. Это головной мозг на самом деле\nпротянул нервные импульсы практически к каждому миллиметру\nвашего тела, в том числе и разветвленную сеть нейронов у вас в\nживоте, которая ответственна за функционирование желудочнокишечного тракта.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Рахул Джандиал",
-    "character_situation": "Нейрофитнес шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_39",
-    "book_id": "gd_39",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 290,
-    "continuation_anchor": "frag_gd_39",
-    "text": "встречается крайне редко, но оно доказывает, что отсутствие сна может\nубить человека.\nВторая возможная причина смерти – ситуация, когда\nневыспавшийся человек садится за руль. Вождение в состоянии\nнедосыпа каждый год становится причиной сотен тысяч дорожных\nпроисшествий с летальным исходом.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Мэттью Уолкер",
-    "character_situation": "Зачем мы спим шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_40",
-    "book_id": "gd_40",
-    "chapter_id": "ch_3",
-    "start_offset": 85,
-    "end_offset": 377,
-    "continuation_anchor": "frag_gd_40",
-    "text": "Болезненное осознание того, как много трудностей мне еще предстояло преодолеть, пришло через год, когда я вернулся на бейсбольное поле. Бейсбол всегда был очень важной частью\nмоей жизни. Мой отец играл в Малой бейсбольной лиге за «Сент-Луис Кардиналс», и я тоже\nмечтал играть профессионально.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Джеймс Клир",
-    "character_situation": "Атомные привычки шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_41",
-    "book_id": "gd_41",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 210,
-    "continuation_anchor": "frag_gd_41",
-    "text": "Любой конфликт в семье, на работе, в любви и дружбе – это лишь\nотражение вашего внутреннего конфликта. Поэтому разбираться надо\nне с окружающими – разбираться надо с собой. И победив неврозы,\nзажить с радостью.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Михаил Лабковский",
-    "character_situation": "Хочу и буду шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_42",
-    "book_id": "gd_42",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 383,
-    "continuation_anchor": "frag_gd_42",
-    "text": "«Следи за своими мыслями, ибо обращаются в слова они.\nСледи за своими словами, ибо превращаются они в действия.\nСледи за действиями, ибо станут они привычками. Следи за\nпривычками, ибо они составляют твой характер. Следи за\nхарактером, ибо станет он твоей судьбой».\n– БУДДА\nКогда Сара пришла ко мне на тренинг, она только что с отличием\nзащитила кандидатскую диссертацию по медицине.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Поддержка и вдохновение",
-    "character_situation": "Ты вся светишься шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_43",
-    "book_id": "gd_43",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 158,
-    "continuation_anchor": "frag_gd_43",
-    "text": "Через заднее стекло он показал ей кулак и тут же превратил его в\nмашущую ладошку. Езжай домой. Ну же, ну…\nОля смотрела, как автобус уезжает в сторону вокзала.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Анна Бабич",
-    "character_situation": "ПроЖИВАЯ шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_44",
-    "book_id": "gd_44",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 380,
-    "continuation_anchor": "frag_gd_44",
-    "text": "в разрешении внешних и внутренних конфликтов. Послевоенные\nлидеры народов хуту и тутси в Бурунди собрались вместе, чтобы\nразработать программу урегулирования конфликтов для своей\nмолодежи, используя при этом французское издание. Международные\nорганизации использовали эту книгу для решения проблем в рамках\nвзаимодействия различных культур и работы с каждой из них по\nотдельности.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Дуглас Стоун",
-    "character_situation": "Неудобные разговоры шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_45",
-    "book_id": "gd_45",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 417,
-    "continuation_anchor": "frag_gd_45",
-    "text": "Глава 1\nЯ сбросил с плеч рюкзак и поставил его на землю. Впечатляет,\nподумал я, глядя на открывшийся передо мной вид. Действительно\nвпечатляет. Женщины, с которыми я познакомился в поезде, были\nправы. Подъем был трудным, но определенно стоил затраченных\nусилий. Я потянулся к рюкзаку, вынул бутылку с водой из бокового\nсетчатого кармашка и сделал долгий глоток.\nПодо мной простирались целые мили горных пиков и долин.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Джон Стрелеки",
-    "character_situation": "Большая пятёрка для жизни шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_46",
-    "book_id": "gd_46",
-    "chapter_id": "ch_4",
-    "start_offset": 1777,
-    "end_offset": 2222,
-    "continuation_anchor": "frag_gd_46",
-    "text": "с человеком, боящимся близости. В сущности, эта книга — компас, позволяющий как можно быстрее распознать\nфилофоба — по возможности до зарождения безнадежной\nвлюбленности и ее почти неизбежного печального конца.\nКнига предназначена как для дилетантов, так и для\nпрофессионалов. Я сознательно ставлю дилетантов на первое место — потому что для меня очень важно донести\nпсихологические знания таким образом, чтобы каждый\nсмог извлечь из них пользу.",
-    "type": "dialogue",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.91,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Роман / Отношения",
-    "character_situation": "Любит не любит шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_47",
-    "book_id": "gd_47",
-    "chapter_id": "ch_3",
-    "start_offset": 1208,
-    "end_offset": 1572,
-    "continuation_anchor": "frag_gd_47",
-    "text": "Специальное послание от Энтони\nРоббинса[1]\nЗа 30 лет я имел честь помочь изменить жизнь к лучшему более\nчем четырем миллионам людей. С кем я только не работал: и с\nолимпийскими чемпионами, и с оскароносными режиссерами, с\nсамыми разными людьми – от президентов стран до заключенных, от\nмиллиардеров до тех, кто еще только начинал делать свои первые шаги\nв бизнесе.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Даррен Харди",
-    "character_situation": "Накопительный эффект шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_48",
-    "book_id": "gd_48",
-    "chapter_id": "ch_3",
-    "start_offset": 0,
-    "end_offset": 213,
-    "continuation_anchor": "frag_gd_48",
-    "text": "• Ребенок не выключил компьютер, как только вы его об этом попросили?\n• Девушка отказалась от интимной близости, хотя вы были полны желания?\n• Муж отправился на вечеринку, когда вы надеялись провести вечер вместе?",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 16,
-    "review_status": "approved",
-    "character_name": "Алан Фромм",
-    "character_situation": "Способность любить шығармасынан алынған тексерілген үзінді."
-  },
-  {
-    "id": "frag_gd_49",
-    "book_id": "gd_49",
-    "chapter_id": "ch_4",
-    "start_offset": 0,
-    "end_offset": 269,
-    "continuation_anchor": "frag_gd_49",
-    "text": "сих пор сталкивается с творениями, которые никогда раньше не видел.\nВ самом деле, сочетание настоящего масштаба и удивительной\nкреативности стало уникальным среди всех ювелирных компаний.\nБрикелл ясно дает понять, что «Картье» – это результат потрясающей\nсемейной саги.",
-    "type": "prose",
-    "language": "ru",
-    "moods": [
-      "шабыт",
-      "уайым",
-      "шаршау"
-    ],
-    "topics": [
-      "өмір",
-      "ішкі ой"
-    ],
-    "reader_intents": [
-      "түсіну",
-      "үміт"
-    ],
-    "hook_score": 0.87,
-    "dialogue_score": 0.68,
-    "emotional_relevance": 0.88,
-    "readability": 0.92,
-    "context_clarity": 0.89,
-    "age_min": 14,
-    "review_status": "approved",
-    "character_name": "Франческа Картье Бриккелл",
-    "character_situation": "Картье: История ювелирного дома шығармасынан алынған тексерілген үзінді."
   }
 ]

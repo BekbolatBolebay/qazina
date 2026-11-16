@@ -13,51 +13,43 @@ const INITIAL_DEMO_FRAGMENT: RecommendationResponse = {
   analysis: {
     emotion: "шаршау",
     emotion_en: "fatigue",
-    topics: ["диалог", "өмір"],
-    reader_intent: "тыныштық",
+    topics: ["достық", "кітап"],
+    reader_intent: "күлкі",
     language: "kk",
-    summary_kk: "Күнделікті күйбеңнен кейінгі жылу мен үміт іздеу сәті.",
+    summary_kk: "Күнделікті күйбеңді сергітетін жанды диалог пен жылы әзіл.",
     safety_alert: false,
     engine: "offline-mvp",
   },
   fragment: {
-    fragment_id: "frag_orig_window",
-    text: "— Неге әр кеш сайын осы терезеге қарайсың?\n— Өйткені онда үнемі жарық жанып тұрады.\n— Ол үйде кім тұрады?\n— Білмеймін. Бірақ біреудің мені күтіп отырғанын елестеткен ұнайды.",
+    fragment_id: "frag_drive_book_003",
+    text: "— Әй, Қожа! — деді Сұлтан мені көріп. — Бүгін сабаққа неге ерте келдің? Әлде Майқанова апайдан қорқып қалдың ба?\n— Қорқатын мен бе екем! — дедім мұрнымды шүйіріп. — Жай ғана дәптерімді үйден ұмытып кете жаздаппын. Ал сен өзің ше, балық аулаймыз деген уәдең қайда?\n— Тссс! Қойшы, үндеме! Артымыздан біреу келе жатыр.\n\nБіз бұрылғанда алдымыздан Жанар шықты. Жанар күлімдегенде, менің жаңағы батылдығымның қайда кеткенін білмей қалдым.",
     type: "dialogue",
     language: "kk",
-    dialogue_category: "достық",
-    moods: ["шаршау", "мұң", "жалғыздық"],
-    topics: ["диалог", "өмір"],
+    dialogue_category: "әзіл",
+    moods: ["қуаныш", "зерігу", "шаршау"],
+    topics: ["достық", "кітап"],
     revealed: false,
     ranking_score: 0.96,
     score_breakdown: {
       mood_match: 0.92,
       hook_score: 0.94,
-      dialogue_quality: 0.98,
-      emotional_relevance: 0.95,
-      readability: 0.99,
-      context_clarity: 0.97,
-    },
-    dilemma: {
-      question:
-        "Күн сайын саған үміт сыйлайтын терезенің жарығы бір кеште өшіп қалса, есікті қағар ма едің?",
-      options: [
-        "Иә, батылданып есікті қағамын",
-        "Алыстан бақылап, себебін түсінуге тырысамын",
-      ],
+      dialogue_quality: 0.96,
+      emotional_relevance: 0.91,
+      readability: 0.98,
+      context_clarity: 0.95,
     },
     actions: ["like", "save", "share", "reveal", "skip"],
     engine_mode: "cloud-llm",
     engine_model: "qwen3-8 + reranker",
   },
-  remaining_candidates: 28,
+  remaining_candidates: 40,
 };
 
 export default function HomePage() {
   const { profile, llmStatus } = useQazina();
   const [result, setResult] = useState<RecommendationResponse>(INITIAL_DEMO_FRAGMENT);
   const [rawMood, setRawMood] = useState("Бүгін сәл шаршадым");
-  const [seenIds, setSeenIds] = useState<string[]>(["frag_orig_window"]);
+  const [seenIds, setSeenIds] = useState<string[]>(["frag_drive_book_003"]);
   const [skipping, setSkipping] = useState(false);
 
   // Also refresh live status indicator cleanly
