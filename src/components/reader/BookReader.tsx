@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -25,7 +25,8 @@ import {
   saveReaderPrefs,
   type ReaderPrefs,
 } from "@/lib/clientStorage";
-import type { Book, Chapter } from "@/types/book";
+import { paginateChapters, type BookPage } from "@/lib/paginateBook";
+import type { Book } from "@/types/book";
 import type { Fragment } from "@/types/fragment";
 
 interface BookReaderProps {
@@ -42,13 +43,15 @@ export function BookReader({
   const { showToast } = useQazina();
   const chapters = book.chapters;
 
-  const initialIdx = (() => {
-    if (anchorFragment) {
-      const i = chapters.findIndex((c) => c.id === anchorFragment.chapter_id);
-      if (i >= 0) return i;
-    }
+  const { pages, anchorPageIndex } = useMemo(
+    () => paginateChapters(chapters, anchorFragment),
+    [chapters, anchorFragment],
+  );
+
+  const initialPageIdx = (() => {
+    if (anchorFragment && anchorPageIndex >= 0) return anchorPageIndex;
     if (initialChapterId) {
-      const i = chapters.findIndex((c) => c.id === initialChapterId);
+      const i = pages.findIndex((p) => p.chapterId === initialChapterId);
       if (i >= 0) return i;
     }
     return 0;
@@ -58,30 +61,30 @@ export function BookReader({
   const [mode, setMode] = useState<"text" | "pdf">(
     chapters.length === 0 && hasPdf ? "pdf" : "text",
   );
-  const [chapterIdx, setChapterIdx] = useState(initialIdx);
+  const [pageIdx, setPageIdx] = useState(initialPageIdx);
   const [prefs, setPrefs] = useState<ReaderPrefs>(DEFAULT_READER_PREFS);
   const [saveOpen, setSaveOpen] = useState(false);
 
-  const currentChapter: Chapter | undefined = chapters[chapterIdx];
+  const currentPage: BookPage | undefined = pages[pageIdx];
 
   useEffect(() => {
     setPrefs(loadReaderPrefs());
   }, []);
 
   useEffect(() => {
-    if (!currentChapter) return;
+    if (!currentPage) return;
     saveBookProgress({
       book_slug: book.slug,
       book_title: book.title,
-      chapter_id: currentChapter.id,
-      chapter_title: currentChapter.title,
+      chapter_id: currentPage.chapterId,
+      chapter_title: `${currentPage.pageNumber}-бет (${currentPage.chapterTitle})`,
       anchor: anchorFragment?.id,
       updated_at: new Date().toISOString(),
     });
-  }, [book.slug, book.title, currentChapter, anchorFragment?.id]);
+  }, [book.slug, book.title, currentPage, anchorFragment?.id]);
 
   useEffect(() => {
-    if (anchorFragment && currentChapter?.id === anchorFragment.chapter_id) {
+    if (anchorFragment && currentPage?.hasAnchor) {
       const el = document.getElementById("continuation-anchor");
       if (el) {
         setTimeout(() => {
@@ -89,7 +92,20 @@ export function BookReader({
         }, 120);
       }
     }
-  }, [anchorFragment, currentChapter?.id]);
+  }, [anchorFragment, currentPage?.hasAnchor, pageIdx]);
+
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (mode !== "text") return;
+      if (e.key === "ArrowLeft" && pageIdx > 0) {
+        setPageIdx((i) => Math.max(0, i - 1));
+      } else if (e.key === "ArrowRight" && pageIdx < pages.length - 1) {
+        setPageIdx((i) => Math.min(pages.length - 1, i + 1));
+      }
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [mode, pageIdx, pages.length]);
 
   function updatePrefs(patch: Partial<ReaderPrefs>) {
     setPrefs((prev) => {
@@ -106,16 +122,12 @@ export function BookReader({
         ? "bg-white text-[#242424] border-[#EFE8DD]"
         : "bg-[#F8F5EF] text-[#242424] border-[#EFE8DD]";
 
-  function renderChapterContent(ch: Chapter) {
-    const content = ch.content;
-    const isAnchorChapter =
-      anchorFragment && anchorFragment.chapter_id === ch.id;
+  function renderPageContent(pg: BookPage) {
+    const content = pg.text;
+    const matchIdx =
+      anchorFragment && pg.hasAnchor ? content.indexOf(anchorFragment.text) : -1;
 
-    if (
-      !isAnchorChapter ||
-      anchorFragment.start_offset < 0 ||
-      anchorFragment.end_offset <= anchorFragment.start_offset
-    ) {
+    if (matchIdx < 0 || !anchorFragment) {
       return content.split("\n").map((p, idx) =>
         p.trim() === "" ? (
           <div key={idx} className="h-3" />
@@ -127,12 +139,12 @@ export function BookReader({
       );
     }
 
-    const before = content.slice(0, anchorFragment.start_offset);
+    const before = content.slice(0, matchIdx);
     const highlighted = content.slice(
-      anchorFragment.start_offset,
-      anchorFragment.end_offset,
+      matchIdx,
+      matchIdx + anchorFragment.text.length,
     );
-    const after = content.slice(anchorFragment.end_offset);
+    const after = content.slice(matchIdx + anchorFragment.text.length);
 
     return (
       <>
@@ -321,26 +333,37 @@ export function BookReader({
         </div>
       </div>
 
-      {/* Chapter Selector & Progress */}
-      {mode === "text" && chapters.length > 1 && (
-        <div className="flex items-center justify-between gap-3 rounded-2xl border border-[#EFE8DD] bg-white px-4 py-2.5 text-xs dark:border-[#2C3733] dark:bg-[#1D2421]">
-          <select
-            value={chapterIdx}
-            onChange={(e) => setChapterIdx(Number(e.target.value))}
-            aria-label="Тарау таңдау"
-            className="max-w-xs truncate rounded-lg border border-[#EFE8DD] bg-[#F8F5EF] px-2.5 py-1.5 font-semibold text-[#173F35] outline-none dark:border-[#2C3733] dark:bg-[#141917] dark:text-[#F3EFE7]"
-          >
-            {chapters.map((ch, idx) => (
-              <option key={ch.id} value={idx}>
-                {ch.title}
-              </option>
-            ))}
-          </select>
+      {/* Page Selector & Progress Bar */}
+      {mode === "text" && pages.length > 0 && (
+        <div className="space-y-2 rounded-2xl border border-[#EFE8DD] bg-white px-4 py-3 text-xs dark:border-[#2C3733] dark:bg-[#1D2421]">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <select
+              value={pageIdx}
+              onChange={(e) => setPageIdx(Number(e.target.value))}
+              aria-label="Бетті таңдау"
+              className="max-w-xs truncate rounded-lg border border-[#EFE8DD] bg-[#F8F5EF] px-2.5 py-1.5 font-semibold text-[#173F35] outline-none dark:border-[#2C3733] dark:bg-[#141917] dark:text-[#F3EFE7]"
+            >
+              {pages.map((pg, idx) => (
+                <option key={pg.pageNumber} value={idx}>
+                  {pg.pageNumber}-бет · {pg.chapterTitle}
+                </option>
+              ))}
+            </select>
 
-          <div className="flex items-center gap-2 font-semibold text-neutral-500">
-            <span>
-              Тарау {chapterIdx + 1} / {chapters.length}
-            </span>
+            <div className="flex items-center gap-2 font-bold text-[#173F35] dark:text-[#D4B382]">
+              <span>
+                {pageIdx + 1}-бет / {pages.length}-бет
+              </span>
+            </div>
+          </div>
+
+          <div className="h-1.5 w-full overflow-hidden rounded-full bg-[#EFE8DD] dark:bg-[#26302C]">
+            <div
+              className="h-full rounded-full bg-[#173F35] transition-all dark:bg-[#B58B54]"
+              style={{
+                width: `${Math.round(((pageIdx + 1) / pages.length) * 100)}%`,
+              }}
+            />
           </div>
         </div>
       )}
@@ -369,7 +392,7 @@ export function BookReader({
             allow="autoplay"
           />
         </div>
-      ) : currentChapter ? (
+      ) : currentPage ? (
         <article
           className={`rounded-3xl border p-6 shadow-literary transition sm:p-10 ${themeClasses}`}
           style={{
@@ -381,36 +404,41 @@ export function BookReader({
                 : "var(--font-sans)",
           }}
         >
-          <h2 className="mb-6 border-b border-current/10 pb-3 text-xl font-bold sm:text-2xl">
-            {currentChapter.title}
-          </h2>
+          <div className="mb-5 flex items-center justify-between border-b border-current/10 pb-3 font-sans text-xs opacity-70">
+            <span>{currentPage.chapterTitle}</span>
+            <span className="font-bold">{currentPage.pageNumber}-бет</span>
+          </div>
 
-          <div>{renderChapterContent(currentChapter)}</div>
+          <div className="min-h-[340px]">{renderPageContent(currentPage)}</div>
 
-          <div className="mt-8 grid grid-cols-2 gap-3 border-t border-current/10 pt-5 font-sans text-xs sm:mt-10 sm:flex sm:items-center sm:justify-between sm:text-sm">
+          <div className="mt-6 text-center font-sans text-xs font-bold opacity-50">
+            — {currentPage.pageNumber} —
+          </div>
+
+          <div className="mt-6 grid grid-cols-2 gap-3 border-t border-current/10 pt-5 font-sans text-xs sm:flex sm:items-center sm:justify-between sm:text-sm">
             <button
               type="button"
-              disabled={chapterIdx <= 0}
+              disabled={pageIdx <= 0}
               onClick={() => {
-                setChapterIdx((i) => Math.max(0, i - 1));
+                setPageIdx((i) => Math.max(0, i - 1));
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
               className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-current/20 px-3 py-2.5 font-semibold disabled:opacity-40 sm:px-4 sm:py-2"
             >
               <ChevronLeft size={16} />
-              Алдыңғы бөлім
+              Алдыңғы бет
             </button>
 
-            {chapterIdx < chapters.length - 1 ? (
+            {pageIdx < pages.length - 1 ? (
               <button
                 type="button"
                 onClick={() => {
-                  setChapterIdx((i) => Math.min(chapters.length - 1, i + 1));
+                  setPageIdx((i) => Math.min(pages.length - 1, i + 1));
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
                 className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-[#173F35] px-4 py-2.5 font-semibold text-white hover:bg-[#112F28] sm:px-5 sm:py-2"
               >
-                Келесі бөлім
+                Келесі бет
                 <ChevronRight size={16} />
               </button>
             ) : (
@@ -432,17 +460,17 @@ export function BookReader({
         </div>
       )}
 
-      {currentChapter && (
+      {currentPage && (
         <SaveThoughtModal
           open={saveOpen}
           onClose={() => setSaveOpen(false)}
-          fragmentId={anchorFragment?.id || `${book.id}_${currentChapter.id}`}
-          text={anchorFragment?.text || currentChapter.content.slice(0, 320)}
+          fragmentId={anchorFragment?.id || `${book.id}_p${currentPage.pageNumber}`}
+          text={anchorFragment?.text || currentPage.text.slice(0, 320)}
           revealed
           bookSlug={book.slug}
           bookTitle={book.title}
           author={book.author}
-          chapterId={currentChapter.id}
+          chapterId={currentPage.chapterId}
           onSaved={() => showToast("Оқыған жерің жинаққа сақталды")}
         />
       )}

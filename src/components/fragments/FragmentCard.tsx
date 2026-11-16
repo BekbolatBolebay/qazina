@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { useQazina } from "@/components/layout/QazinaProvider";
 import { buildLLMHeaders } from "@/lib/clientStorage";
+import { paginateChapters, type BookPage } from "@/lib/paginateBook";
 import type { Chapter } from "@/types/book";
 import type { HiddenFragmentPayload, RevealPayload } from "@/types/fragment";
 import type { MoodAnalysisResult } from "@/types/recommendation";
@@ -53,7 +54,7 @@ export function FragmentCard({
   const [showFormula, setShowFormula] = useState(false);
   const [sceneImage, setSceneImage] = useState<string | null>(null);
   const [imageBusy, setImageBusy] = useState(false);
-  const [inlineChapters, setInlineChapters] = useState<Chapter[] | null>(null);
+  const [inlinePages, setInlinePages] = useState<BookPage[] | null>(null);
   const [inlineIdx, setInlineIdx] = useState(0);
   const [loadingBook, setLoadingBook] = useState(false);
 
@@ -117,8 +118,8 @@ export function FragmentCard({
 
   async function handleOpenInlineFullBook() {
     if (!revealData) return;
-    if (inlineChapters) {
-      setInlineChapters(null);
+    if (inlinePages) {
+      setInlinePages(null);
       return;
     }
     setLoadingBook(true);
@@ -129,9 +130,18 @@ export function FragmentCard({
       if (res.ok) {
         const data = await res.json();
         const chs = (data.chapters || []) as Chapter[];
-        setInlineChapters(chs);
-        const startIdx = chs.findIndex((c) => c.id === revealData.chapter_id);
-        setInlineIdx(startIdx >= 0 ? startIdx : 0);
+        const { pages } = paginateChapters(chs);
+        setInlinePages(pages);
+        const matchIdx = pages.findIndex(
+          (p) =>
+            p.chapterId === revealData.chapter_id &&
+            (p.text.includes(fragment.text) ||
+              p.text.includes(fragment.text.slice(0, 60))),
+        );
+        const chFallback = pages.findIndex(
+          (p) => p.chapterId === revealData.chapter_id,
+        );
+        setInlineIdx(matchIdx >= 0 ? matchIdx : chFallback >= 0 ? chFallback : 0);
         void fetch("/api/analytics/summary", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -139,7 +149,7 @@ export function FragmentCard({
         });
       }
     } catch {
-      showToast("Кітап тарауларын жүктеу сәтсіз болды");
+      showToast("Кітап беттерін жүктеу сәтсіз болды");
     } finally {
       setLoadingBook(false);
     }
@@ -409,9 +419,9 @@ export function FragmentCard({
                 ) : (
                   <BookOpen size={15} />
                 )}
-                {inlineChapters
-                  ? "Толық мәтінді жабу"
-                  : "Толық кітапты осы жерде оқу"}
+                {inlinePages
+                  ? "Кітап беттерін жабу"
+                  : "Толық кітапты беттеп оқу"}
               </button>
 
               <Link
@@ -443,29 +453,29 @@ export function FragmentCard({
               </button>
             </div>
 
-            {inlineChapters && inlineChapters.length > 0 && (
+            {inlinePages && inlinePages.length > 0 && (
               <div className="mt-4 rounded-2xl border border-[#d9e9d7] bg-[#F8F5EF] p-4 dark:border-[#2C3733] dark:bg-[#141917]">
                 <div className="mb-3 flex flex-wrap items-center justify-between gap-2 border-b border-[#e1e6df] pb-2.5 dark:border-[#26302C]">
                   <select
                     value={inlineIdx}
                     onChange={(e) => setInlineIdx(Number(e.target.value))}
-                    aria-label="Тарау таңдау"
+                    aria-label="Бет таңдау"
                     className="max-w-[230px] truncate rounded-lg border border-[#d2e1d5] bg-white px-2.5 py-1.5 text-xs font-bold text-[#173F35] dark:border-[#2C3733] dark:bg-[#1D2421] dark:text-[#F3EFE7]"
                   >
-                    {inlineChapters.map((ch, idx) => (
-                      <option key={ch.id} value={idx}>
-                        {ch.title}
+                    {inlinePages.map((pg, idx) => (
+                      <option key={pg.pageNumber} value={idx}>
+                        {pg.pageNumber}-бет · {pg.chapterTitle}
                       </option>
                     ))}
                   </select>
 
                   <div className="flex items-center gap-2">
-                    <span className="text-[11px] font-semibold text-neutral-500">
-                      {inlineIdx + 1} / {inlineChapters.length}
+                    <span className="text-[11px] font-bold text-[#173F35] dark:text-[#D4B382]">
+                      {inlineIdx + 1}-бет / {inlinePages.length}-бет
                     </span>
                     <button
                       type="button"
-                      onClick={() => setInlineChapters(null)}
+                      onClick={() => setInlinePages(null)}
                       className="rounded-lg p-1 text-neutral-500 hover:bg-[#EFE8DD]"
                       aria-label="Жабу"
                     >
@@ -474,11 +484,12 @@ export function FragmentCard({
                   </div>
                 </div>
 
-                <div className="literary-text max-h-[420px] space-y-2.5 overflow-y-auto pr-1 text-[16px] leading-[1.8] text-[#242424] dark:text-[#F3EFE7]">
-                  <h4 className="font-sans text-sm font-bold text-[#173F35] dark:text-[#D4B382]">
-                    {inlineChapters[inlineIdx]?.title}
-                  </h4>
-                  {inlineChapters[inlineIdx]?.content
+                <div className="literary-text min-h-[240px] space-y-2.5 text-[16px] leading-[1.8] text-[#242424] dark:text-[#F3EFE7]">
+                  <div className="flex items-center justify-between font-sans text-[11px] font-semibold text-[#829184]">
+                    <span>{inlinePages[inlineIdx]?.chapterTitle}</span>
+                    <span>{inlinePages[inlineIdx]?.pageNumber}-бет</span>
+                  </div>
+                  {inlinePages[inlineIdx]?.text
                     .split("\n")
                     .map((line, i) =>
                       line.trim() === "" ? (
@@ -497,19 +508,22 @@ export function FragmentCard({
                     className="inline-flex items-center gap-1 rounded-lg border border-[#d2e1d5] bg-white px-3 py-1.5 text-xs font-bold disabled:opacity-40 dark:border-[#2C3733] dark:bg-[#1D2421]"
                   >
                     <ChevronLeft size={14} />
-                    Алдыңғы
+                    Алдыңғы бет
                   </button>
+                  <span className="text-[11px] font-bold text-neutral-400">
+                    — {inlineIdx + 1} —
+                  </span>
                   <button
                     type="button"
-                    disabled={inlineIdx >= inlineChapters.length - 1}
+                    disabled={inlineIdx >= inlinePages.length - 1}
                     onClick={() =>
                       setInlineIdx((i) =>
-                        Math.min(inlineChapters.length - 1, i + 1),
+                        Math.min(inlinePages.length - 1, i + 1),
                       )
                     }
                     className="inline-flex items-center gap-1 rounded-lg bg-[#173F35] px-3 py-1.5 text-xs font-bold text-white disabled:opacity-40"
                   >
-                    Келесі
+                    Келесі бет
                     <ChevronRight size={14} />
                   </button>
                 </div>
