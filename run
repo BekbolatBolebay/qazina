@@ -1,120 +1,77 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")"
-open_browser=false
+
+PORT="${PORT:-3000}"
 foreground=false
-pause_on_error=false
-for option in "$@"; do
-  case "$option" in
-    --open) open_browser=true ;;
+open_browser=false
+force_build=false
+
+for opt in "$@"; do
+  case "$opt" in
     --foreground) foreground=true ;;
-    --pause-on-error) pause_on_error=true ;;
-    *) echo "Неизвестный параметр: $option" >&2; exit 2 ;;
+    --open) open_browser=true ;;
+    --build) force_build=true ;;
+    *) echo "Белгісіз параметр: $opt" >&2; exit 2 ;;
   esac
 done
-on_exit() {
-  local result=$?
-  if [ "$result" -ne 0 ]; then
-    echo >&2
-    echo 'Не удалось запустить Mood. Причина указана выше.' >&2
-    echo "Журналы: $PWD/.data/server.log и $PWD/.data/postgres.log" >&2
-    if $pause_on_error && [ -t 0 ]; then
-      read -r -p 'Нажмите Enter, чтобы закрыть окно…' || true
-    fi
-  fi
-}
-trap on_exit EXIT
-# Графический рабочий стол не загружает настройки терминала и PATH от nvm.
-export PATH="$HOME/.local/bin:/usr/local/go/bin:/usr/local/bin:$PATH"
+
+export PATH="$HOME/.local/bin:/usr/local/bin:$PATH"
 if ! command -v npm >/dev/null 2>&1; then
   node_bin=$(find "${NVM_DIR:-$HOME/.nvm}/versions/node" -mindepth 2 -maxdepth 2 -type d -name bin 2>/dev/null | sort -V | tail -n 1 || true)
   if [ -n "$node_bin" ]; then export PATH="$node_bin:$PATH"; fi
 fi
-ready() {
-  curl --connect-timeout 1 --max-time 2 -fsS http://127.0.0.1:8088/api/health >/dev/null 2>&1
-}
-finish_start() {
-  for attempt in {1..30}; do
-    if ready; then
-      echo 'Mood готова: http://localhost:8088'
-      if $open_browser; then
-        xdg-open http://localhost:8088 >/dev/null 2>&1 || echo 'Откройте http://localhost:8088 в браузере.'
-      fi
-      return 0
-    fi
-    sleep 1
-  done
-  echo 'Сайт не ответил вовремя.' >&2
-  if [ -f .data/server.log ]; then tail -n 30 .data/server.log; fi
-  return 1
-}
+
 mkdir -p .data
-chmod 700 .data
-exec 9>.data/start.lock
-flock 9
-if [ ! -f .env ]; then
-  python3 - <<'PY'
-import secrets,os
-password=secrets.token_hex(24)
-fd=os.open('.env',os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600)
-with os.fdopen(fd,'w') as f:
- f.write(f'POSTGRES_PASSWORD={password}\nDATABASE_URL=postgres://mood:{password}@127.0.0.1:5438/mood?sslmode=disable\nAPP_ORIGIN=http://localhost:8088\nADDR=127.0.0.1:8088\nCOOKIE_SECURE=false\nSEED_DATA=true\n')
-PY
+
+if [ ! -f .env.local ] && [ -f .env.example ]; then
+  cp .env.example .env.local
 fi
-set -a
-source .env
-set +a
-if [ -n "${MOOD_EXTERNAL_DB:-}" ]; then
-  echo 'Используется внешний PostgreSQL.'
-elif command -v initdb >/dev/null 2>&1; then
-  if [ ! -f .data/postgres/PG_VERSION ]; then
-    printf '%s' "$POSTGRES_PASSWORD" > .data/pg-password
-    chmod 600 .data/pg-password
-    initdb -D .data/postgres -U mood --pwfile=.data/pg-password --auth-host=scram-sha-256 --auth-local=trust --encoding=UTF8 --no-locale > .data/initdb.log
-    : > .data/pg-password
-  fi
-  if ! pg_ctl -D .data/postgres status >/dev/null 2>&1; then
-    pg_ctl -D .data/postgres -l "$PWD/.data/postgres.log" -o "-h 127.0.0.1 -p 5438 -k $PWD/.data -c max_connections=30 -c shared_buffers=64MB" start 9>&-
-  fi
-  if ! PGPASSWORD="$POSTGRES_PASSWORD" psql -h 127.0.0.1 -p 5438 -U mood -d postgres -tAc "SELECT 1 FROM pg_database WHERE datname='mood'" | rg -q 1; then
-    PGPASSWORD="$POSTGRES_PASSWORD" createdb -h 127.0.0.1 -p 5438 -U mood mood
-  fi
-else
-  docker compose up -d --wait db 9>&-
+
+if [ -f .env.local ]; then
+  set -a
+  # shellcheck disable=SC1091
+  source .env.local
+  set +a
 fi
-running_pid() {
-  [ -s .data/server.pid ] || return 0
-  local pid exe
-  pid=$(cat .data/server.pid)
-  exe=$(readlink "/proc/$pid/exe" 2>/dev/null || true)
-  exe=${exe% (deleted)}
-  [ "$exe" = "$PWD/.data/mood-server" ] && kill -0 "$pid" 2>/dev/null && echo "$pid" || return 0
-}
-if [ -n "$(running_pid)" ]; then
-  echo 'Mood уже запущена: http://localhost:8088'
-  finish_start
-  exit 0
-fi
-if ready; then
-  echo 'Порт 8088 занят другим процессом (наш сервер не запущен). Остановите его или запустите ./stop.' >&2
-  exit 1
-fi
-for dependency in node npm go curl; do
-  if ! command -v "$dependency" >/dev/null 2>&1; then
-    echo "Не найдена необходимая программа: $dependency" >&2
-    exit 1
+
+if [ -s .data/qazina.pid ]; then
+  pid=$(cat .data/qazina.pid)
+  if kill -0 "$pid" 2>/dev/null && curl --connect-timeout 1 --max-time 2 -fsS "http://127.0.0.1:$PORT/api/books" >/dev/null 2>&1; then
+    echo "QAZINA қазірдің өзінде қосулы: http://localhost:$PORT"
+    exit 0
   fi
-done
-echo 'Собираем Mood…'
-(cd frontend && if [ ! -d node_modules ]; then npm ci; fi && npm run build)
-(cd backend && go build -o ../.data/mood-server .)
-export UPLOAD_DIR="$PWD/.data/uploads"
-export FRONTEND_DIR="$PWD/frontend/dist"
+fi
+
+if [ ! -d node_modules ]; then
+  echo "Тәуелділіктер орнатылуда..."
+  npm ci
+fi
+
+if $force_build || [ ! -f .next/BUILD_ID ]; then
+  echo "QAZINA жиналуда (npm run build)..."
+  npm run build
+fi
+
 if $foreground; then
-  echo $$ > .data/server.pid
-  exec 9>&-
-  exec "$PWD/.data/mood-server"
+  echo $$ > .data/qazina.pid
+  exec npx next start -H 0.0.0.0 -p "$PORT"
 fi
-nohup "$PWD/.data/mood-server" > .data/server.log 2>&1 < /dev/null 9>&- &
-echo $! > .data/server.pid
-finish_start
+
+setsid nohup npx next start -H 0.0.0.0 -p "$PORT" > .data/qazina.log 2>&1 < /dev/null &
+echo $! > .data/qazina.pid
+
+for _ in {1..30}; do
+  if curl --connect-timeout 1 --max-time 2 -fsS "http://127.0.0.1:$PORT/api/books" >/dev/null 2>&1; then
+    echo "QAZINA дайын: http://localhost:$PORT (http://127.0.0.1:$PORT)"
+    if $open_browser; then
+      xdg-open "http://localhost:$PORT" >/dev/null 2>&1 || true
+    fi
+    exit 0
+  fi
+  sleep 1
+done
+
+echo "Сервер дер кезінде жауап бермеді. Лог: .data/qazina.log" >&2
+tail -n 30 .data/qazina.log >&2 || true
+exit 1
